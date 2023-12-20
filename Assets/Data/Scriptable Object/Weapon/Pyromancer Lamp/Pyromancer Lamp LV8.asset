@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4342ad7ef75f0de43860b4af3ccaab79, type: 3}
+  m_Name: Pyromancer Lamp LV8
+  m_EditorClassIdentifier: 
+  name: Pyromancer Lamp
+  description: Damage increased by 5.
+  icon: {fileID: 21300000, guid: a9ac2abf543db8c4ab205734b0afb1ca, type: 3}
+  damage: 50
+  projectile: 3
+  hitDelay: 3
+  pierce: 0
+  range: 0
+  level: 8
+  nextLevelPrefab: {fileID: 0}

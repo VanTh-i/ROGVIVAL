@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0302bd75613b6a147bd873ac9931cf47, type: 3}
+  m_Name: Iron Heart LV6
+  m_EditorClassIdentifier: 
+  name: Iron Heart LV6
+  description: Augments max health by 10.
+  icon: {fileID: 21300000, guid: 34d883c34c6d96348b27933cee74077d, type: 3}
+  multipler: 10
+  level: 6
+  nextLevelPrefab: {fileID: 991285730002012387, guid: c8cecbf219d24cc4eb34145094049d63, type: 3}

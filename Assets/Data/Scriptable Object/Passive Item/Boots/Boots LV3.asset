@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0302bd75613b6a147bd873ac9931cf47, type: 3}
+  m_Name: Boots LV3
+  m_EditorClassIdentifier: 
+  name: Boots LV3
+  description: Character moves 5% faster.
+  icon: {fileID: 21300000, guid: b08242be202db7e43bfcb1d9056cdb49, type: 3}
+  multipler: 5
+  level: 3
+  nextLevelPrefab: {fileID: 8484751806190869699, guid: ecb0488a8a0aa284995cef4a273f6e38, type: 3}

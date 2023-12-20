@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4342ad7ef75f0de43860b4af3ccaab79, type: 3}
+  m_Name: Arrow LV1
+  m_EditorClassIdentifier: 
+  name: Arrow LV1
+  description: Fire arrow the faced direction.
+  icon: {fileID: 21300000, guid: c2a9b8989862a1b46b7d34489da58b4a, type: 3}
+  damage: 10
+  projectile: 1
+  hitDelay: 1
+  pierce: 1
+  range: 25
+  level: 1
+  nextLevelPrefab: {fileID: 4255514822295802079, guid: e29464369864b2d4580d2f9c754afdce, type: 3}
