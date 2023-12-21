@@ -20,7 +20,8 @@ public class PlayerDirect : ThaiBehaviour
 
     private void PlayerDirection()
     {
-        moveDir = InputManager.Instance.MoveDir;
+        //moveDir = InputManager.Instance.MoveDir;
+        moveDir = InputManager.Instance.MobileMoveDir;
         if (moveDir.x != 0)
         {
             lastHorizontalVector = moveDir.x;

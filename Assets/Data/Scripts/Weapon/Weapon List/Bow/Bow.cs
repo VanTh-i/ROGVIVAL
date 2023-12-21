@@ -37,7 +37,8 @@ public class Bow : WeaponController
 
     private void GetShootPoint()
     {
-        Vector3 moveDir = InputManager.Instance.MoveDir;
+        //Vector3 moveDir = InputManager.Instance.MoveDir;
+        Vector3 moveDir = InputManager.Instance.MobileMoveDir;
 
         if (moveDir.x > 0 && moveDir.y == 0) //right
         {

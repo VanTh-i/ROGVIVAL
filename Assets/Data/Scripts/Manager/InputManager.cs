@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Terresquall;
 
 public class InputManager : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class InputManager : MonoBehaviour
 
     private Vector2 moveDir;
     public Vector2 MoveDir { get => moveDir; }
+
+    private Vector2 mobileMoveDir;
+    public Vector2 MobileMoveDir { get => mobileMoveDir; }
 
     private bool onLeftClick = false;
     public bool OnLeftClick { get => onLeftClick; }
@@ -26,13 +30,14 @@ public class InputManager : MonoBehaviour
     }
     private void Update()
     {
-        GetLeftClick();
-        GetRightClick();
+        // GetLeftClick();
+        // GetRightClick();
     }
     private void FixedUpdate()
     {
         GetMousePos();
         MoveInput();
+        MobileInput();
     }
 
     protected virtual void GetMousePos()
@@ -46,6 +51,23 @@ public class InputManager : MonoBehaviour
         float moveY = Input.GetAxisRaw("Vertical");
 
         return moveDir = new Vector2(moveX, moveY).normalized;
+    }
+
+    protected virtual Vector2 MobileInput()
+    {
+        float moveX, moveY;
+        if (VirtualJoystick.CountActiveInstances() > 0)
+        {
+            moveX = VirtualJoystick.GetAxisRaw("horizontal");
+            moveY = VirtualJoystick.GetAxisRaw("vertical");
+        }
+        else
+        {
+            moveX = Input.GetAxisRaw("Horizontal");
+            moveY = Input.GetAxisRaw("Vertical");
+        }
+
+        return mobileMoveDir = new Vector2(moveX, moveY).normalized;
     }
 
     protected virtual void GetRightClick() // Right mouse click

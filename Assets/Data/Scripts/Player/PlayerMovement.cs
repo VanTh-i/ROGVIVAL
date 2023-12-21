@@ -44,7 +44,8 @@ public class PlayerMovement : ThaiBehaviour
 
     protected virtual void Moving()
     {
-        moveDir = InputManager.Instance.MoveDir;
+        //moveDir = InputManager.Instance.MoveDir;
+        moveDir = InputManager.Instance.MobileMoveDir;
 
         //moving
         rb.velocity = new Vector2(moveDir.x * playerStats.CurrentSpeed, moveDir.y * playerStats.CurrentSpeed);

@@ -10,7 +10,8 @@ public class Sword : WeaponController
 
     private void FixedUpdate()
     {
-        swordDirection = InputManager.Instance.MoveDir;
+        //swordDirection = InputManager.Instance.MoveDir;
+        swordDirection = InputManager.Instance.MobileMoveDir;
         if (swordDirection.x != 0)
         {
             lastHorizontalVector = swordDirection.x;

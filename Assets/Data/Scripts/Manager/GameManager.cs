@@ -20,8 +20,8 @@ public class GameManager : MonoBehaviour
 
     public bool isGameOver = false;
     public bool choosingUpgrade;
-
     public GameObject playerObject;
+    public CanvasGroup joystickFade;
 
     public GameState currentState;
     public GameState previousState;
@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
     public GameObject pauseScreen;
     public GameObject resultsScreen;
     public GameObject levelUpScreen;
+    public GameObject joystick;
+    public Button pauseBtn;
 
 
     [Header("Stats UI")]
@@ -109,7 +111,6 @@ public class GameManager : MonoBehaviour
                 Debug.LogWarning("STATE DOES NOT EXIST");
                 break;
         }
-
     }
 
     public void ChangeState(GameState newState)
@@ -125,6 +126,7 @@ public class GameManager : MonoBehaviour
             ChangeState(GameState.Paused);
             Time.timeScale = 0f;
             pauseScreen.SetActive(true);
+            joystick.SetActive(false);
         }
     }
     public void ResumeGame()
@@ -134,6 +136,7 @@ public class GameManager : MonoBehaviour
             ChangeState(previousState);
             Time.timeScale = 1f;
             pauseScreen.SetActive(false);
+            joystick.SetActive(true);
         }
     }
     private void CheckPauseAndResume()
@@ -221,33 +224,24 @@ public class GameManager : MonoBehaviour
     public void StartLevelUp()
     {
         ChangeState(GameState.LevelUp);
+
+        pauseBtn.gameObject.SetActive(false);
+        joystickFade.alpha = 0f;
+        joystickFade.interactable = false;
+
         playerObject.transform.GetChild(2).SendMessage("RemoveAndApplyUpgrades");
     }
     public void EndLevelUp()
     {
         choosingUpgrade = false;
         Time.timeScale = 1f;
+
         levelUpScreen.SetActive(false);
+        pauseBtn.gameObject.SetActive(true);
+        joystickFade.alpha = 1f;
+        joystickFade.interactable = true;
+
         ChangeState(GameState.GamePlay);
+
     }
-
-
-    // private void StatsResult()
-    // {
-    //     if (Input.GetKey(KeyCode.Tab))
-    //     {
-    //         if (currentState == GameState.Paused || currentState == GameState.GameOver)
-    //         {
-    //             return;
-    //         }
-    //         else
-    //         {
-    //             statsScreen.SetActive(true);
-    //         }
-    //     }
-    //     else
-    //     {
-    //         statsScreen.SetActive(false);
-    //     }
-    // }
 }
