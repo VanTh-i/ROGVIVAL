@@ -77,6 +77,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        SoundManager.Instance.musicSource.Stop();
         SoundManager.Instance.PlayMusic("Theme");
     }
 

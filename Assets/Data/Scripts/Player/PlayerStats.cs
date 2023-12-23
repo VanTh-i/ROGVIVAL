@@ -196,7 +196,7 @@ public class PlayerStats : MonoBehaviour
         if (experience >= experienceCap)
         {
             level++;
-            //CurrentMaxHP += 2;
+            SoundManager.Instance.PlaySFX("Level Up");
             Debug.Log("Level Up to " + level);
             experience -= experienceCap;
 
