@@ -57,6 +57,7 @@ public class EnemyStats : ThaiBehaviour
 
     public virtual void TakeDamage(int dmg, Vector2 sourcePosition)
     {
+        SoundManager.Instance.PlaySFX("Enemy Hit");
         currentMaxHp -= dmg;
         if (gameObject.activeInHierarchy)
         {
@@ -119,6 +120,7 @@ public class EnemyStats : ThaiBehaviour
     protected virtual void Kill()
     {
         // for override
+        SoundManager.Instance.PlaySFX("Enemy Dead");
     }
 
     protected void OnDisable()

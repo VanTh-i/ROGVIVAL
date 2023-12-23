@@ -220,6 +220,7 @@ public class PlayerStats : MonoBehaviour
     public void TakeDamage(int dmg)
     {
         //CurrentHp -= dmg;
+        SoundManager.Instance.PlaySFX("Player Hit");
         CurrentHp -= CalculateDamageTake(dmg);
         Debug.Log("take " + CalculateDamageTake(dmg) + " dmg");
         StartCoroutine(DamageFlash());

@@ -75,6 +75,11 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
     }
 
+    private void Start()
+    {
+        SoundManager.Instance.PlayMusic("Theme");
+    }
+
     private void Update()
     {
         switch (currentState)
@@ -155,6 +160,8 @@ public class GameManager : MonoBehaviour
     }
     public void GameOver()
     {
+        SoundManager.Instance.PlaySFX("Game Over");
+        SoundManager.Instance.musicSource.Stop();
         timeSurvivalDisplay.text = stopwatchDisplay.text;
         ChangeState(GameState.GameOver);
     }
