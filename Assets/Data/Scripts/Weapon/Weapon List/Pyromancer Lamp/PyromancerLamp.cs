@@ -10,7 +10,7 @@ public class PyromancerLamp : WeaponController
         for (int i = 0; i < CurrProjectile; i++)
         {
             Vector3 spawnPos = new Vector3(transform.position.x - 1, transform.position.y, transform.position.z);
-            float offsetMinDist = 1f;
+            float offsetMinDist = 0.3f;
             Vector3 offset = new Vector3(Random.Range(-offsetMinDist, offsetMinDist), Random.Range(-offsetMinDist, offsetMinDist), 0f);
             spawnPos += offset;
             Quaternion rot = GetRandomShootPoint();

@@ -15,11 +15,13 @@ public class TitleSceneManager : MonoBehaviour
     public void Setting()
     {
         audioPanelUI.SetActive(true);
+        SoundManager.Instance.PlaySFX("Button");
     }
 
     public void CloseSetting()
     {
         audioPanelUI.SetActive(false);
+        SoundManager.Instance.PlaySFX("Button");
     }
 
 }

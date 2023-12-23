@@ -126,6 +126,7 @@ public class GameManager : MonoBehaviour
 
     public void PausedGame()
     {
+        SoundManager.Instance.PlaySFX("Button");
         if (currentState != GameState.Paused)
         {
             previousState = currentState;
@@ -137,6 +138,7 @@ public class GameManager : MonoBehaviour
     }
     public void ResumeGame()
     {
+        SoundManager.Instance.PlaySFX("Button");
         if (currentState == GameState.Paused)
         {
             ChangeState(previousState);
@@ -231,6 +233,8 @@ public class GameManager : MonoBehaviour
 
     public void StartLevelUp()
     {
+        SoundManager.Instance.PlaySFX("Level Up");
+
         ChangeState(GameState.LevelUp);
 
         pauseBtn.gameObject.SetActive(false);
@@ -241,6 +245,8 @@ public class GameManager : MonoBehaviour
     }
     public void EndLevelUp()
     {
+        SoundManager.Instance.PlaySFX("Weapon Up");
+
         choosingUpgrade = false;
         Time.timeScale = 1f;
 

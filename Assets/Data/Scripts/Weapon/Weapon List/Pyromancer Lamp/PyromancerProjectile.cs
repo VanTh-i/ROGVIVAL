@@ -13,6 +13,7 @@ public class PyromancerProjectile : EnemyImpact
         {
             pyromancerLamp = FindObjectOfType<PyromancerLamp>();
         }
+        SoundManager.Instance.PlaySFX("FireBall");
     }
 
     private void Update()

@@ -245,7 +245,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 61.9
   m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -327,7 +327,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1570509625}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.095000006, y: 0.19678405}
   m_AnchorMax: {x: 0.1996129, y: 0.33573866}
@@ -716,7 +716,7 @@ RectTransform:
   - {fileID: 284081618}
   - {fileID: 7427803}
   m_Father: {fileID: 1570509625}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.24953222, y: 0.21421595}
   m_AnchorMax: {x: 0.8993065, y: 0.31478408}
@@ -871,7 +871,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 61.9
   m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -952,7 +952,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1570509625}
-  - {fileID: 1480373591}
   m_Father: {fileID: 832809810}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1898,7 +1897,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 61.9
   m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2241,7 +2240,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 66.5
+  m_fontSize: 49.9
   m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2780,7 +2779,7 @@ RectTransform:
   - {fileID: 433961034}
   - {fileID: 2037773726}
   m_Father: {fileID: 1570509625}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.24953222, y: 0.44400004}
   m_AnchorMax: {x: 0.8993065, y: 0.5455227}
@@ -2876,18 +2875,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1480373590}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.0026362462, w: 0.9999966}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 241930872}
+  m_Father: {fileID: 1570509625}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 357, y: 307}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0.82477427, y: 0.7714406}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1480373592
 MonoBehaviour:
@@ -3068,7 +3067,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 61.9
   m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3149,6 +3148,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 862861966}
+  - {fileID: 1480373591}
   - {fileID: 1973174164}
   - {fileID: 24625157}
   - {fileID: 1430748028}
@@ -3440,7 +3440,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1570509625}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.095000006, y: 0.43}
   m_AnchorMax: {x: 0.19830646, y: 0.57000005}
@@ -3586,6 +3586,18 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 415734353d395734aaed587efdc9dd7d, type: 3}
   - name: Level Up
     clip: {fileID: 8300000, guid: c55bc6b29abf8eb428e15a0e1c855f52, type: 3}
+  - name: Button
+    clip: {fileID: 8300000, guid: 1f6f54c4dd47dab40b718d253adb4087, type: 3}
+  - name: Weapon Up
+    clip: {fileID: 8300000, guid: c780bbc1f0ebffd48876fecfad4c12f9, type: 3}
+  - name: Pick Up
+    clip: {fileID: 8300000, guid: b30078f0594cdb3488e6ebb8b5713a67, type: 3}
+  - name: Sword
+    clip: {fileID: 8300000, guid: 7f6954aeb95f323438f9c892fb938b0e, type: 3}
+  - name: Arrow
+    clip: {fileID: 8300000, guid: 430299f75e02c5a4192ed7cecbce8205, type: 3}
+  - name: FireBall
+    clip: {fileID: 8300000, guid: a9852ebcf628f6148b628d210a6c178c, type: 3}
   musicSource: {fileID: 479543303}
   SFXSource: {fileID: 612407273}
 --- !u!4 &1977956159

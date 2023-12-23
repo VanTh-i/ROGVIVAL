@@ -15,6 +15,7 @@ public class Arrow : EnemyImpact
             bow = FindObjectOfType<Bow>();
         }
         pierce = bow.weaponStats.Pierce;
+        SoundManager.Instance.PlaySFX("Arrow");
     }
 
     private void Update()

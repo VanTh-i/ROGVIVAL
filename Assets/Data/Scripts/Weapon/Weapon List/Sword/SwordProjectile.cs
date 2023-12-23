@@ -13,6 +13,8 @@ public class SwordProjectile : EnemyImpact
         {
             sword = FindObjectOfType<Sword>();
         }
+        SoundManager.Instance.PlaySFX("Sword");
+
     }
 
     protected override void LoadComponents()

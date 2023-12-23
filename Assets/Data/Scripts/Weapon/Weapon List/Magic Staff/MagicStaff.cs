@@ -41,7 +41,7 @@ public class MagicStaff : WeaponController
                 for (int i = 0; i < CurrProjectile; i++)
                 {
                     Vector3 spawnPos = shootPoint.transform.position;
-                    float offsetMinDist = 0.5f;
+                    float offsetMinDist = 0.3f;
                     Vector3 offset = new Vector3(Random.Range(-offsetMinDist, offsetMinDist), Random.Range(-offsetMinDist, offsetMinDist), 0f);
                     spawnPos += offset;
                     Quaternion rot = shootPoint.transform.rotation;
