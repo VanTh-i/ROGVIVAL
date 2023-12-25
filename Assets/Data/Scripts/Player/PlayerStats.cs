@@ -136,7 +136,7 @@ public class PlayerStats : MonoBehaviour
     private void Awake()
     {
         characterStats = CharacterSelector.GetData();
-        CharacterSelector.Instance.DestroySingleton();
+        //CharacterSelector.Instance.DestroySingleton();
 
         inventory = GetComponentInChildren<InventoryManager>();
 

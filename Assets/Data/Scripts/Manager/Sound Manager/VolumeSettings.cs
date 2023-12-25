@@ -5,7 +5,7 @@ using TMPro;
 
 public class VolumeSettings : MonoBehaviour
 {
-    [SerializeField] private AudioMixer gameMixer;
+    public AudioMixer gameMixer;
     [SerializeField] private Slider musicSlider, SFXSlider;
     private const string MusicVolumeKey = "MusicVolume";
     private const string SFXVolumeKey = "SFXVolume";
@@ -61,6 +61,12 @@ public class VolumeSettings : MonoBehaviour
         float volume = musicSlider.value;
         gameMixer.SetFloat("Music", Mathf.Log10(volume) * 20);
         PlayerPrefs.SetFloat(MusicVolumeKey, volume);
+
+        if (isMusicMuted)
+        {
+            musicBtn.GetComponent<Image>().color = Color.white;
+            isMusicMuted = !isMusicMuted;
+        }
     }
 
     public void SetSFXVolume()
@@ -68,10 +74,17 @@ public class VolumeSettings : MonoBehaviour
         float volume = SFXSlider.value;
         gameMixer.SetFloat("SFX", Mathf.Log10(volume) * 20);
         PlayerPrefs.SetFloat(SFXVolumeKey, volume);
+
+        if (isSFXMuted)
+        {
+            SFXBtn.GetComponent<Image>().color = Color.white;
+            isSFXMuted = !isSFXMuted;
+        }
     }
 
     public void ToggleMusic()
     {
+        Debug.Log("click");
         isMusicMuted = !isMusicMuted;
         PlayerPrefs.SetInt(MusicMutedKey, isMusicMuted ? 1 : 0);
         ApplyMutedStates();
@@ -80,19 +93,20 @@ public class VolumeSettings : MonoBehaviour
 
     public void ToggleSFX()
     {
+        Debug.Log("click");
         isSFXMuted = !isSFXMuted;
         PlayerPrefs.SetInt(SFXMutedKey, isSFXMuted ? 1 : 0);
         ApplyMutedStates();
         SFXBtnStatus();
     }
 
-    private void MusicBtnStatus()
+    public void MusicBtnStatus()
     {
-        if (PlayerPrefs.GetInt(MusicMutedKey) == 1)
+        if (isMusicMuted)
         {
             musicBtn.GetComponent<Image>().color = new Color(119f / 255f, 119f / 255f, 119f / 255f);
         }
-        else if (PlayerPrefs.GetInt(MusicMutedKey) == 0)
+        else
         {
             musicBtn.GetComponent<Image>().color = Color.white;
         }
@@ -100,11 +114,11 @@ public class VolumeSettings : MonoBehaviour
 
     private void SFXBtnStatus()
     {
-        if (PlayerPrefs.GetInt(SFXMutedKey) == 1)
+        if (isSFXMuted)
         {
             SFXBtn.GetComponent<Image>().color = new Color(119f / 255f, 119f / 255f, 119f / 255f);
         }
-        else if (PlayerPrefs.GetInt(SFXMutedKey) == 0)
+        else
         {
             SFXBtn.GetComponent<Image>().color = Color.white;
         }
