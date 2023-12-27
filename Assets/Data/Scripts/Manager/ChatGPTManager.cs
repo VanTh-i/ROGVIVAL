@@ -12,12 +12,12 @@ public class ChatGPTManager : MonoBehaviour
     public OnResponseEvent onResponse;
     private OpenAIApi openAI = new OpenAIApi();
     private List<ChatMessage> messages = new List<ChatMessage>();
-    private string currentContent = "";
+    //private string currentContent = "";
 
 
     public async void AskChatGPT(string newText)
     {
-        currentContent = "";
+        //currentContent = "";
 
         ChatMessage newMessage = new ChatMessage();
         newMessage.Content = newText;

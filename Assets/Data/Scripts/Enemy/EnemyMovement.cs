@@ -66,16 +66,19 @@ public class EnemyMovement : ThaiBehaviour
         diff.Normalize();
         float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
 
-        Vector3 aimDir = Vector3.one;
+        Vector3 aimDir = transform.parent.localScale;
         if (rot_z > 90 || rot_z < -90)
         {
-            aimDir.x = -1f;
+            //aimDir.x = transform.parent.localScale.x * (-1f);
+            aimDir.x = -Mathf.Abs(transform.parent.localScale.x);
+
         }
         else
         {
-            aimDir.x = +1f;
+            aimDir.x = Mathf.Abs(transform.parent.localScale.x);
         }
         enemyDir.localScale = aimDir;
+
     }
 
     public void Knockback(Vector2 velocity, float duration)

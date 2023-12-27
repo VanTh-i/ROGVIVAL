@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8593094cddc53bf46936c51c61a516bf, type: 3}
   m_Name: Dragon
   m_EditorClassIdentifier: 
-  damage: 12
-  maxHp: 20
+  damage: 20
+  maxHp: 50
   speed: 1.5
   attackRange: 0

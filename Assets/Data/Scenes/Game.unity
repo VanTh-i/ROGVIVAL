@@ -989,7 +989,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8016995060521306378, guid: 049c26e745f5a8a408f58b2941f3e08c, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8016995060521306378, guid: 049c26e745f5a8a408f58b2941f3e08c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2090,7 +2090,7 @@ Transform:
   - {fileID: 686786911}
   - {fileID: 354949514}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &243536023
 MonoBehaviour:
@@ -2307,7 +2307,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &257141117
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3857,7 +3857,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &431305043 stripped
 GameObject:
@@ -4016,7 +4016,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1099248406851191903, guid: 292f201e8c1ce5143b31694ad445c2e0, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1099248406851191903, guid: 292f201e8c1ce5143b31694ad445c2e0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5157,7 +5157,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8631186987551635384, guid: 1db6898d25d4dac4dac48b7c238e06cf, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8631186987551635384, guid: 1db6898d25d4dac4dac48b7c238e06cf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6113,7 +6113,7 @@ Transform:
   - {fileID: 953442215}
   - {fileID: 555333934}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &707766754
 GameObject:
@@ -7096,6 +7096,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804424546}
   m_CullTransparentMesh: 1
+--- !u!1001 &812600988
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1255052194}
+    m_Modifications:
+    - target: {fileID: 3615694497809047900, guid: 18ff4be6e2c67d94e937ceb5ceff964a, type: 3}
+      propertyPath: m_Name
+      value: Giant(boss)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615694497809047900, guid: 18ff4be6e2c67d94e937ceb5ceff964a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5985434976830627566, guid: 18ff4be6e2c67d94e937ceb5ceff964a, type: 3}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 5985434976830627566, guid: 18ff4be6e2c67d94e937ceb5ceff964a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5985434976830627566, guid: 18ff4be6e2c67d94e937ceb5ceff964a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5985434976830627566, guid: 18ff4be6e2c67d94e937ceb5ceff964a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5985434976830627566, guid: 18ff4be6e2c67d94e937ceb5ceff964a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5985434976830627566, guid: 18ff4be6e2c67d94e937ceb5ceff964a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5985434976830627566, guid: 18ff4be6e2c67d94e937ceb5ceff964a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5985434976830627566, guid: 18ff4be6e2c67d94e937ceb5ceff964a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5985434976830627566, guid: 18ff4be6e2c67d94e937ceb5ceff964a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5985434976830627566, guid: 18ff4be6e2c67d94e937ceb5ceff964a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5985434976830627566, guid: 18ff4be6e2c67d94e937ceb5ceff964a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 18ff4be6e2c67d94e937ceb5ceff964a, type: 3}
+--- !u!4 &812600989 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5985434976830627566, guid: 18ff4be6e2c67d94e937ceb5ceff964a, type: 3}
+  m_PrefabInstance: {fileID: 812600988}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &819575443
 GameObject:
   m_ObjectHideFlags: 0
@@ -7482,7 +7548,7 @@ RectTransform:
   m_Children:
   - {fileID: 1206868273}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7944,7 +8010,7 @@ Transform:
   - {fileID: 1255052194}
   - {fileID: 290561205}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &878150595
 MonoBehaviour:
@@ -7977,6 +8043,14 @@ MonoBehaviour:
   - {fileID: 1633628259}
   - {fileID: 1409802801}
   - {fileID: 103376305}
+  - {fileID: 1899407088}
+  - {fileID: 1070144670}
+  - {fileID: 1972938525}
+  - {fileID: 1012817939}
+  - {fileID: 1133622280}
+  - {fileID: 812600989}
+  - {fileID: 1635061595}
+  - {fileID: 1519694988}
   poolObjs: []
   poolHolder: {fileID: 290561205}
 --- !u!114 &878150597
@@ -7995,55 +8069,871 @@ MonoBehaviour:
   - waveName: Wave 1
     enemyTypes:
     - enemyName: slime
-      enemyCount: 50
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 7852717934789078804, guid: 049c26e745f5a8a408f58b2941f3e08c, type: 3}
+    - enemyName: slime
+      enemyCount: 999
       spawnCount: 0
       enemyPrefab: {fileID: 8113727090440078884, guid: 36f9749f521370f478c875a9f931bdda, type: 3}
-    - enemyName: slime
-      enemyCount: 50
+    waveQuantity: 0
+    spawnCount: 0
+    spawnInterval: 3
+  - waveName: Wave 2
+    enemyTypes:
+    - enemyName: Bat
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 1413203333908883762, guid: d2da5f53566a2f1419fad4f8702c9554, type: 3}
+    - enemyName: Bat
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 3078066447260828687, guid: 7b2eaeac384a62e4a903401a7bbcda11, type: 3}
+    - enemyName: Slime
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 8113727090440078884, guid: 36f9749f521370f478c875a9f931bdda, type: 3}
+    - enemyName: Slime
+      enemyCount: 999
       spawnCount: 0
       enemyPrefab: {fileID: 7852717934789078804, guid: 049c26e745f5a8a408f58b2941f3e08c, type: 3}
     waveQuantity: 0
     spawnCount: 0
-    spawnInterval: 5
-  - waveName: Wave 2
+    spawnInterval: 3
+  - waveName: Wave 3
     enemyTypes:
-    - enemyName: Bat
-      enemyCount: 50
+    - enemyName: bat boss
+      enemyCount: 1
+      spawnCount: 0
+      enemyPrefab: {fileID: 3078066447260828687, guid: 7c601cc2b880cad4f97e5f396a77db7c, type: 3}
+    - enemyName: boar
+      enemyCount: 10
+      spawnCount: 0
+      enemyPrefab: {fileID: 3815937026665283732, guid: 36f88477c3de2974ea6e4bf5cc354e12, type: 3}
+    - enemyName: boar
+      enemyCount: 10
+      spawnCount: 0
+      enemyPrefab: {fileID: 2532807017667438992, guid: 322f43c81b94a144a95456e62b140a74, type: 3}
+    - enemyName: bat
+      enemyCount: 999
       spawnCount: 0
       enemyPrefab: {fileID: 1413203333908883762, guid: d2da5f53566a2f1419fad4f8702c9554, type: 3}
-    - enemyName: Bat
-      enemyCount: 50
+    - enemyName: bat
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 3078066447260828687, guid: 7b2eaeac384a62e4a903401a7bbcda11, type: 3}
+    - enemyName: slime
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 7852717934789078804, guid: 049c26e745f5a8a408f58b2941f3e08c, type: 3}
+    - enemyName: slime
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 8113727090440078884, guid: 36f9749f521370f478c875a9f931bdda, type: 3}
+    waveQuantity: 0
+    spawnCount: 0
+    spawnInterval: 2
+  - waveName: Wave 4
+    enemyTypes:
+    - enemyName: boar
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 3815937026665283732, guid: 36f88477c3de2974ea6e4bf5cc354e12, type: 3}
+    - enemyName: boar
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 2532807017667438992, guid: 322f43c81b94a144a95456e62b140a74, type: 3}
+    - enemyName: bat
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 1413203333908883762, guid: d2da5f53566a2f1419fad4f8702c9554, type: 3}
+    - enemyName: bat
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 3078066447260828687, guid: 7b2eaeac384a62e4a903401a7bbcda11, type: 3}
+    - enemyName: slime
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 8113727090440078884, guid: 36f9749f521370f478c875a9f931bdda, type: 3}
+    - enemyName: slime
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 7852717934789078804, guid: 049c26e745f5a8a408f58b2941f3e08c, type: 3}
+    waveQuantity: 0
+    spawnCount: 0
+    spawnInterval: 2
+  - waveName: Wave 5
+    enemyTypes:
+    - enemyName: boar
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 3815937026665283732, guid: 36f88477c3de2974ea6e4bf5cc354e12, type: 3}
+    - enemyName: boar
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 2532807017667438992, guid: 322f43c81b94a144a95456e62b140a74, type: 3}
+    - enemyName: bat
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 1413203333908883762, guid: d2da5f53566a2f1419fad4f8702c9554, type: 3}
+    - enemyName: bat
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 3078066447260828687, guid: 7b2eaeac384a62e4a903401a7bbcda11, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 2624024780543372989, guid: baad8f1d1273b604da46ed6d1690912c, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5574493498182591039, guid: 90cba7bda00196748924125dd7d58f94, type: 3}
+    waveQuantity: 0
+    spawnCount: 0
+    spawnInterval: 2
+  - waveName: Wave 6
+    enemyTypes:
+    - enemyName: boss
+      enemyCount: 1
+      spawnCount: 0
+      enemyPrefab: {fileID: 2624024780543372989, guid: 8eae9fe2120178c4fb453e0396bfd2a5, type: 3}
+    - enemyName: boar
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 3815937026665283732, guid: 36f88477c3de2974ea6e4bf5cc354e12, type: 3}
+    - enemyName: boar
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 2532807017667438992, guid: 322f43c81b94a144a95456e62b140a74, type: 3}
+    - enemyName: bat
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 1413203333908883762, guid: d2da5f53566a2f1419fad4f8702c9554, type: 3}
+    - enemyName: bat
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 3078066447260828687, guid: 7b2eaeac384a62e4a903401a7bbcda11, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 2624024780543372989, guid: baad8f1d1273b604da46ed6d1690912c, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5574493498182591039, guid: 90cba7bda00196748924125dd7d58f94, type: 3}
+    - enemyName: slime
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 8113727090440078884, guid: 36f9749f521370f478c875a9f931bdda, type: 3}
+    - enemyName: slime
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 7852717934789078804, guid: 049c26e745f5a8a408f58b2941f3e08c, type: 3}
+    waveQuantity: 0
+    spawnCount: 0
+    spawnInterval: 2
+  - waveName: Wave 7
+    enemyTypes:
+    - enemyName: boar
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 3815937026665283732, guid: 36f88477c3de2974ea6e4bf5cc354e12, type: 3}
+    - enemyName: boar
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 2532807017667438992, guid: 322f43c81b94a144a95456e62b140a74, type: 3}
+    - enemyName: dino
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5819101056393025937, guid: a3aedf4e85a740a4da1cb1e88a5d3eb6, type: 3}
+    - enemyName: dino
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 4806965918829371496, guid: 7b6fc3afa6470c74b990ca313b941f20, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 2624024780543372989, guid: baad8f1d1273b604da46ed6d1690912c, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5574493498182591039, guid: 90cba7bda00196748924125dd7d58f94, type: 3}
+    - enemyName: bat
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 1413203333908883762, guid: d2da5f53566a2f1419fad4f8702c9554, type: 3}
+    - enemyName: bat
+      enemyCount: 999
       spawnCount: 0
       enemyPrefab: {fileID: 3078066447260828687, guid: 7b2eaeac384a62e4a903401a7bbcda11, type: 3}
     waveQuantity: 0
     spawnCount: 0
-    spawnInterval: 5
-  - waveName: Wave 3
+    spawnInterval: 2
+  - waveName: Wave 8
     enemyTypes:
     - enemyName: boar
-      enemyCount: 50
+      enemyCount: 999
       spawnCount: 0
       enemyPrefab: {fileID: 3815937026665283732, guid: 36f88477c3de2974ea6e4bf5cc354e12, type: 3}
     - enemyName: boar
-      enemyCount: 50
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 2532807017667438992, guid: 322f43c81b94a144a95456e62b140a74, type: 3}
+    - enemyName: dino
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5819101056393025937, guid: a3aedf4e85a740a4da1cb1e88a5d3eb6, type: 3}
+    - enemyName: dino
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 4806965918829371496, guid: 7b6fc3afa6470c74b990ca313b941f20, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 2624024780543372989, guid: baad8f1d1273b604da46ed6d1690912c, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5574493498182591039, guid: 90cba7bda00196748924125dd7d58f94, type: 3}
+    - enemyName: mush
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 3248930005312642834, guid: 233547c5666b9ba46975c587785fb1e0, type: 3}
+    - enemyName: mush
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 8337680984500150315, guid: 1db6898d25d4dac4dac48b7c238e06cf, type: 3}
+    waveQuantity: 0
+    spawnCount: 0
+    spawnInterval: 2
+  - waveName: Wave 9
+    enemyTypes:
+    - enemyName: boss
+      enemyCount: 1
+      spawnCount: 0
+      enemyPrefab: {fileID: 3815937026665283732, guid: f5594e8b3e3945a47b42b63bab5a218d, type: 3}
+    - enemyName: boar
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 3815937026665283732, guid: 36f88477c3de2974ea6e4bf5cc354e12, type: 3}
+    - enemyName: boar
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 2532807017667438992, guid: 322f43c81b94a144a95456e62b140a74, type: 3}
+    - enemyName: dino
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5819101056393025937, guid: a3aedf4e85a740a4da1cb1e88a5d3eb6, type: 3}
+    - enemyName: dino
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 4806965918829371496, guid: 7b6fc3afa6470c74b990ca313b941f20, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 2624024780543372989, guid: baad8f1d1273b604da46ed6d1690912c, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5574493498182591039, guid: 90cba7bda00196748924125dd7d58f94, type: 3}
+    - enemyName: mush
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 3248930005312642834, guid: 233547c5666b9ba46975c587785fb1e0, type: 3}
+    - enemyName: mush
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 8337680984500150315, guid: 1db6898d25d4dac4dac48b7c238e06cf, type: 3}
+    waveQuantity: 0
+    spawnCount: 0
+    spawnInterval: 2
+  - waveName: Wave 10
+    enemyTypes:
+    - enemyName: giant
+      enemyCount: 10
+      spawnCount: 0
+      enemyPrefab: {fileID: 6515349824611566960, guid: 871cea3fb5519a54cad066cd86e3ccd3, type: 3}
+    - enemyName: giant
+      enemyCount: 10
+      spawnCount: 0
+      enemyPrefab: {fileID: 3615694497809047900, guid: 15421608a0255ae44bdaa5d9f036afed, type: 3}
+    - enemyName: dino
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5819101056393025937, guid: a3aedf4e85a740a4da1cb1e88a5d3eb6, type: 3}
+    - enemyName: dino
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 4806965918829371496, guid: 7b6fc3afa6470c74b990ca313b941f20, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 2624024780543372989, guid: baad8f1d1273b604da46ed6d1690912c, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5574493498182591039, guid: 90cba7bda00196748924125dd7d58f94, type: 3}
+    - enemyName: mush
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 3248930005312642834, guid: 233547c5666b9ba46975c587785fb1e0, type: 3}
+    - enemyName: mush
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 8337680984500150315, guid: 1db6898d25d4dac4dac48b7c238e06cf, type: 3}
+    waveQuantity: 0
+    spawnCount: 0
+    spawnInterval: 2
+  - waveName: Wave 11
+    enemyTypes:
+    - enemyName: warrior
+      enemyCount: 10
+      spawnCount: 0
+      enemyPrefab: {fileID: 5074950941236564018, guid: 160432d7780d5f04aae1782571cf0e9b, type: 3}
+    - enemyName: warrior
+      enemyCount: 10
+      spawnCount: 0
+      enemyPrefab: {fileID: 5187703610128254656, guid: 418412b6a00a4894b875ecacfef6f4e7, type: 3}
+    - enemyName: dino
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5819101056393025937, guid: a3aedf4e85a740a4da1cb1e88a5d3eb6, type: 3}
+    - enemyName: dino
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 4806965918829371496, guid: 7b6fc3afa6470c74b990ca313b941f20, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 2624024780543372989, guid: baad8f1d1273b604da46ed6d1690912c, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5574493498182591039, guid: 90cba7bda00196748924125dd7d58f94, type: 3}
+    - enemyName: mush
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 3248930005312642834, guid: 233547c5666b9ba46975c587785fb1e0, type: 3}
+    - enemyName: mush
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 8337680984500150315, guid: 1db6898d25d4dac4dac48b7c238e06cf, type: 3}
+    waveQuantity: 0
+    spawnCount: 0
+    spawnInterval: 2
+  - waveName: Wave 12
+    enemyTypes:
+    - enemyName: boss
+      enemyCount: 1
+      spawnCount: 0
+      enemyPrefab: {fileID: 4806965918829371496, guid: 977308ed64628d0449ab4b4b458ee7e7, type: 3}
+    - enemyName: warrior
+      enemyCount: 10
+      spawnCount: 0
+      enemyPrefab: {fileID: 5074950941236564018, guid: 160432d7780d5f04aae1782571cf0e9b, type: 3}
+    - enemyName: warrior
+      enemyCount: 10
+      spawnCount: 0
+      enemyPrefab: {fileID: 5187703610128254656, guid: 418412b6a00a4894b875ecacfef6f4e7, type: 3}
+    - enemyName: dino
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5819101056393025937, guid: a3aedf4e85a740a4da1cb1e88a5d3eb6, type: 3}
+    - enemyName: dino
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 4806965918829371496, guid: 7b6fc3afa6470c74b990ca313b941f20, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 2624024780543372989, guid: baad8f1d1273b604da46ed6d1690912c, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5574493498182591039, guid: 90cba7bda00196748924125dd7d58f94, type: 3}
+    - enemyName: mush
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 3248930005312642834, guid: 233547c5666b9ba46975c587785fb1e0, type: 3}
+    - enemyName: mush
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 8337680984500150315, guid: 1db6898d25d4dac4dac48b7c238e06cf, type: 3}
+    waveQuantity: 0
+    spawnCount: 0
+    spawnInterval: 2
+  - waveName: Wave 13
+    enemyTypes:
+    - enemyName: warrior
+      enemyCount: 30
+      spawnCount: 0
+      enemyPrefab: {fileID: 5074950941236564018, guid: 160432d7780d5f04aae1782571cf0e9b, type: 3}
+    - enemyName: warrior
+      enemyCount: 30
+      spawnCount: 0
+      enemyPrefab: {fileID: 5187703610128254656, guid: 418412b6a00a4894b875ecacfef6f4e7, type: 3}
+    - enemyName: dino
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5819101056393025937, guid: a3aedf4e85a740a4da1cb1e88a5d3eb6, type: 3}
+    - enemyName: dino
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 4806965918829371496, guid: 7b6fc3afa6470c74b990ca313b941f20, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 2624024780543372989, guid: baad8f1d1273b604da46ed6d1690912c, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5574493498182591039, guid: 90cba7bda00196748924125dd7d58f94, type: 3}
+    - enemyName: mush
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 3248930005312642834, guid: 233547c5666b9ba46975c587785fb1e0, type: 3}
+    - enemyName: mush
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 8337680984500150315, guid: 1db6898d25d4dac4dac48b7c238e06cf, type: 3}
+    - enemyName: giant
+      enemyCount: 30
+      spawnCount: 0
+      enemyPrefab: {fileID: 3615694497809047900, guid: 15421608a0255ae44bdaa5d9f036afed, type: 3}
+    - enemyName: giant
+      enemyCount: 30
+      spawnCount: 0
+      enemyPrefab: {fileID: 6515349824611566960, guid: 871cea3fb5519a54cad066cd86e3ccd3, type: 3}
+    waveQuantity: 0
+    spawnCount: 0
+    spawnInterval: 2
+  - waveName: Wave 14
+    enemyTypes:
+    - enemyName: warrior
+      enemyCount: 30
+      spawnCount: 0
+      enemyPrefab: {fileID: 5074950941236564018, guid: 160432d7780d5f04aae1782571cf0e9b, type: 3}
+    - enemyName: warrior
+      enemyCount: 30
+      spawnCount: 0
+      enemyPrefab: {fileID: 5187703610128254656, guid: 418412b6a00a4894b875ecacfef6f4e7, type: 3}
+    - enemyName: dino
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5819101056393025937, guid: a3aedf4e85a740a4da1cb1e88a5d3eb6, type: 3}
+    - enemyName: dino
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 4806965918829371496, guid: 7b6fc3afa6470c74b990ca313b941f20, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 2624024780543372989, guid: baad8f1d1273b604da46ed6d1690912c, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5574493498182591039, guid: 90cba7bda00196748924125dd7d58f94, type: 3}
+    - enemyName: mush
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 3248930005312642834, guid: 233547c5666b9ba46975c587785fb1e0, type: 3}
+    - enemyName: mush
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 8337680984500150315, guid: 1db6898d25d4dac4dac48b7c238e06cf, type: 3}
+    - enemyName: giant
+      enemyCount: 30
+      spawnCount: 0
+      enemyPrefab: {fileID: 3615694497809047900, guid: 15421608a0255ae44bdaa5d9f036afed, type: 3}
+    - enemyName: giant
+      enemyCount: 30
+      spawnCount: 0
+      enemyPrefab: {fileID: 6515349824611566960, guid: 871cea3fb5519a54cad066cd86e3ccd3, type: 3}
+    - enemyName: dragon
+      enemyCount: 10
+      spawnCount: 0
+      enemyPrefab: {fileID: 4020451341918782665, guid: 051bc4ad622f9574e98f8e64570f8fe1, type: 3}
+    - enemyName: dragon
+      enemyCount: 10
+      spawnCount: 0
+      enemyPrefab: {fileID: 7069495799411858287, guid: dd5105911fd753040b78b9bb3642163c, type: 3}
+    waveQuantity: 0
+    spawnCount: 0
+    spawnInterval: 2
+  - waveName: Wave 15
+    enemyTypes:
+    - enemyName: boss
+      enemyCount: 1
+      spawnCount: 0
+      enemyPrefab: {fileID: 3615694497809047900, guid: 18ff4be6e2c67d94e937ceb5ceff964a, type: 3}
+    - enemyName: warrior
+      enemyCount: 30
+      spawnCount: 0
+      enemyPrefab: {fileID: 5074950941236564018, guid: 160432d7780d5f04aae1782571cf0e9b, type: 3}
+    - enemyName: warrior
+      enemyCount: 30
+      spawnCount: 0
+      enemyPrefab: {fileID: 5187703610128254656, guid: 418412b6a00a4894b875ecacfef6f4e7, type: 3}
+    - enemyName: dino
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5819101056393025937, guid: a3aedf4e85a740a4da1cb1e88a5d3eb6, type: 3}
+    - enemyName: dino
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 4806965918829371496, guid: 7b6fc3afa6470c74b990ca313b941f20, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 2624024780543372989, guid: baad8f1d1273b604da46ed6d1690912c, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5574493498182591039, guid: 90cba7bda00196748924125dd7d58f94, type: 3}
+    - enemyName: mush
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 3248930005312642834, guid: 233547c5666b9ba46975c587785fb1e0, type: 3}
+    - enemyName: mush
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 8337680984500150315, guid: 1db6898d25d4dac4dac48b7c238e06cf, type: 3}
+    - enemyName: giant
+      enemyCount: 30
+      spawnCount: 0
+      enemyPrefab: {fileID: 3615694497809047900, guid: 15421608a0255ae44bdaa5d9f036afed, type: 3}
+    - enemyName: giant
+      enemyCount: 30
+      spawnCount: 0
+      enemyPrefab: {fileID: 6515349824611566960, guid: 871cea3fb5519a54cad066cd86e3ccd3, type: 3}
+    - enemyName: dragon
+      enemyCount: 10
+      spawnCount: 0
+      enemyPrefab: {fileID: 4020451341918782665, guid: 051bc4ad622f9574e98f8e64570f8fe1, type: 3}
+    - enemyName: dragon
+      enemyCount: 10
+      spawnCount: 0
+      enemyPrefab: {fileID: 7069495799411858287, guid: dd5105911fd753040b78b9bb3642163c, type: 3}
+    waveQuantity: 0
+    spawnCount: 0
+    spawnInterval: 2
+  - waveName: Wave 16
+    enemyTypes:
+    - enemyName: warrior
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5074950941236564018, guid: 160432d7780d5f04aae1782571cf0e9b, type: 3}
+    - enemyName: warrior
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5187703610128254656, guid: 418412b6a00a4894b875ecacfef6f4e7, type: 3}
+    - enemyName: dino
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5819101056393025937, guid: a3aedf4e85a740a4da1cb1e88a5d3eb6, type: 3}
+    - enemyName: dino
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 4806965918829371496, guid: 7b6fc3afa6470c74b990ca313b941f20, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 2624024780543372989, guid: baad8f1d1273b604da46ed6d1690912c, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5574493498182591039, guid: 90cba7bda00196748924125dd7d58f94, type: 3}
+    - enemyName: mush
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 3248930005312642834, guid: 233547c5666b9ba46975c587785fb1e0, type: 3}
+    - enemyName: mush
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 8337680984500150315, guid: 1db6898d25d4dac4dac48b7c238e06cf, type: 3}
+    - enemyName: giant
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 3615694497809047900, guid: 15421608a0255ae44bdaa5d9f036afed, type: 3}
+    - enemyName: giant
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 6515349824611566960, guid: 871cea3fb5519a54cad066cd86e3ccd3, type: 3}
+    - enemyName: dragon
+      enemyCount: 40
+      spawnCount: 0
+      enemyPrefab: {fileID: 4020451341918782665, guid: 051bc4ad622f9574e98f8e64570f8fe1, type: 3}
+    - enemyName: dragon
+      enemyCount: 40
+      spawnCount: 0
+      enemyPrefab: {fileID: 7069495799411858287, guid: dd5105911fd753040b78b9bb3642163c, type: 3}
+    waveQuantity: 0
+    spawnCount: 0
+    spawnInterval: 2
+  - waveName: Wave 17
+    enemyTypes:
+    - enemyName: boss
+      enemyCount: 1
+      spawnCount: 0
+      enemyPrefab: {fileID: 5074950941236564018, guid: b0097eadef6bed3459e64a2a777992b3, type: 3}
+    - enemyName: warrior
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5074950941236564018, guid: 160432d7780d5f04aae1782571cf0e9b, type: 3}
+    - enemyName: warrior
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5187703610128254656, guid: 418412b6a00a4894b875ecacfef6f4e7, type: 3}
+    - enemyName: dino
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5819101056393025937, guid: a3aedf4e85a740a4da1cb1e88a5d3eb6, type: 3}
+    - enemyName: dino
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 4806965918829371496, guid: 7b6fc3afa6470c74b990ca313b941f20, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 2624024780543372989, guid: baad8f1d1273b604da46ed6d1690912c, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5574493498182591039, guid: 90cba7bda00196748924125dd7d58f94, type: 3}
+    - enemyName: mush
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 3248930005312642834, guid: 233547c5666b9ba46975c587785fb1e0, type: 3}
+    - enemyName: mush
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 8337680984500150315, guid: 1db6898d25d4dac4dac48b7c238e06cf, type: 3}
+    - enemyName: giant
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 3615694497809047900, guid: 15421608a0255ae44bdaa5d9f036afed, type: 3}
+    - enemyName: giant
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 6515349824611566960, guid: 871cea3fb5519a54cad066cd86e3ccd3, type: 3}
+    - enemyName: dragon
+      enemyCount: 40
+      spawnCount: 0
+      enemyPrefab: {fileID: 4020451341918782665, guid: 051bc4ad622f9574e98f8e64570f8fe1, type: 3}
+    - enemyName: dragon
+      enemyCount: 40
+      spawnCount: 0
+      enemyPrefab: {fileID: 7069495799411858287, guid: dd5105911fd753040b78b9bb3642163c, type: 3}
+    waveQuantity: 0
+    spawnCount: 0
+    spawnInterval: 2
+  - waveName: Wave 18
+    enemyTypes:
+    - enemyName: warrior
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5074950941236564018, guid: 160432d7780d5f04aae1782571cf0e9b, type: 3}
+    - enemyName: warrior
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5187703610128254656, guid: 418412b6a00a4894b875ecacfef6f4e7, type: 3}
+    - enemyName: dino
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5819101056393025937, guid: a3aedf4e85a740a4da1cb1e88a5d3eb6, type: 3}
+    - enemyName: dino
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 4806965918829371496, guid: 7b6fc3afa6470c74b990ca313b941f20, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 2624024780543372989, guid: baad8f1d1273b604da46ed6d1690912c, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5574493498182591039, guid: 90cba7bda00196748924125dd7d58f94, type: 3}
+    - enemyName: mush
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 3248930005312642834, guid: 233547c5666b9ba46975c587785fb1e0, type: 3}
+    - enemyName: mush
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 8337680984500150315, guid: 1db6898d25d4dac4dac48b7c238e06cf, type: 3}
+    - enemyName: giant
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 3615694497809047900, guid: 15421608a0255ae44bdaa5d9f036afed, type: 3}
+    - enemyName: giant
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 6515349824611566960, guid: 871cea3fb5519a54cad066cd86e3ccd3, type: 3}
+    - enemyName: dragon
+      enemyCount: 40
+      spawnCount: 0
+      enemyPrefab: {fileID: 4020451341918782665, guid: 051bc4ad622f9574e98f8e64570f8fe1, type: 3}
+    - enemyName: dragon
+      enemyCount: 40
+      spawnCount: 0
+      enemyPrefab: {fileID: 7069495799411858287, guid: dd5105911fd753040b78b9bb3642163c, type: 3}
+    - enemyName: boar
+      enemyCount: 40
+      spawnCount: 999
+      enemyPrefab: {fileID: 3815937026665283732, guid: 36f88477c3de2974ea6e4bf5cc354e12, type: 3}
+    - enemyName: boar
+      enemyCount: 999
       spawnCount: 0
       enemyPrefab: {fileID: 2532807017667438992, guid: 322f43c81b94a144a95456e62b140a74, type: 3}
     waveQuantity: 0
     spawnCount: 0
-    spawnInterval: 5
-  - waveName: Wave 4
+    spawnInterval: 2
+  - waveName: Wave 19
     enemyTypes:
-    - enemyName: dino
-      enemyCount: 50
+    - enemyName: boss
+      enemyCount: 1
       spawnCount: 0
-      enemyPrefab: {fileID: 4806965918829371496, guid: 7b6fc3afa6470c74b990ca313b941f20, type: 3}
+      enemyPrefab: {fileID: 7069495799411858287, guid: 057247a2b839f00478fd268b3bd4d5ae, type: 3}
+    - enemyName: warrior
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5074950941236564018, guid: 160432d7780d5f04aae1782571cf0e9b, type: 3}
+    - enemyName: warrior
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5187703610128254656, guid: 418412b6a00a4894b875ecacfef6f4e7, type: 3}
     - enemyName: dino
-      enemyCount: 50
+      enemyCount: 999
       spawnCount: 0
       enemyPrefab: {fileID: 5819101056393025937, guid: a3aedf4e85a740a4da1cb1e88a5d3eb6, type: 3}
+    - enemyName: dino
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 4806965918829371496, guid: 7b6fc3afa6470c74b990ca313b941f20, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 2624024780543372989, guid: baad8f1d1273b604da46ed6d1690912c, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5574493498182591039, guid: 90cba7bda00196748924125dd7d58f94, type: 3}
+    - enemyName: mush
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 3248930005312642834, guid: 233547c5666b9ba46975c587785fb1e0, type: 3}
+    - enemyName: mush
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 8337680984500150315, guid: 1db6898d25d4dac4dac48b7c238e06cf, type: 3}
+    - enemyName: giant
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 3615694497809047900, guid: 15421608a0255ae44bdaa5d9f036afed, type: 3}
+    - enemyName: giant
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 6515349824611566960, guid: 871cea3fb5519a54cad066cd86e3ccd3, type: 3}
+    - enemyName: dragon
+      enemyCount: 40
+      spawnCount: 0
+      enemyPrefab: {fileID: 4020451341918782665, guid: 051bc4ad622f9574e98f8e64570f8fe1, type: 3}
+    - enemyName: dragon
+      enemyCount: 40
+      spawnCount: 0
+      enemyPrefab: {fileID: 7069495799411858287, guid: dd5105911fd753040b78b9bb3642163c, type: 3}
+    - enemyName: boar
+      enemyCount: 40
+      spawnCount: 999
+      enemyPrefab: {fileID: 3815937026665283732, guid: 36f88477c3de2974ea6e4bf5cc354e12, type: 3}
+    - enemyName: boar
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 2532807017667438992, guid: 322f43c81b94a144a95456e62b140a74, type: 3}
     waveQuantity: 0
     spawnCount: 0
-    spawnInterval: 5
+    spawnInterval: 2
+  - waveName: Wave 20
+    enemyTypes:
+    - enemyName: boss
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 7069495799411858287, guid: 057247a2b839f00478fd268b3bd4d5ae, type: 3}
+    - enemyName: warrior
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5074950941236564018, guid: 160432d7780d5f04aae1782571cf0e9b, type: 3}
+    - enemyName: warrior
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5187703610128254656, guid: 418412b6a00a4894b875ecacfef6f4e7, type: 3}
+    - enemyName: dino
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5819101056393025937, guid: a3aedf4e85a740a4da1cb1e88a5d3eb6, type: 3}
+    - enemyName: dino
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 4806965918829371496, guid: 7b6fc3afa6470c74b990ca313b941f20, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 2624024780543372989, guid: baad8f1d1273b604da46ed6d1690912c, type: 3}
+    - enemyName: ghost
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 5574493498182591039, guid: 90cba7bda00196748924125dd7d58f94, type: 3}
+    - enemyName: mush
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 3248930005312642834, guid: 233547c5666b9ba46975c587785fb1e0, type: 3}
+    - enemyName: mush
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 8337680984500150315, guid: 1db6898d25d4dac4dac48b7c238e06cf, type: 3}
+    - enemyName: giant
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 3615694497809047900, guid: 15421608a0255ae44bdaa5d9f036afed, type: 3}
+    - enemyName: giant
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 6515349824611566960, guid: 871cea3fb5519a54cad066cd86e3ccd3, type: 3}
+    - enemyName: dragon
+      enemyCount: 100
+      spawnCount: 0
+      enemyPrefab: {fileID: 4020451341918782665, guid: 051bc4ad622f9574e98f8e64570f8fe1, type: 3}
+    - enemyName: dragon
+      enemyCount: 100
+      spawnCount: 0
+      enemyPrefab: {fileID: 7069495799411858287, guid: dd5105911fd753040b78b9bb3642163c, type: 3}
+    - enemyName: boar
+      enemyCount: 40
+      spawnCount: 999
+      enemyPrefab: {fileID: 3815937026665283732, guid: 36f88477c3de2974ea6e4bf5cc354e12, type: 3}
+    - enemyName: boar
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 2532807017667438992, guid: 322f43c81b94a144a95456e62b140a74, type: 3}
+    - enemyName: bat
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 1413203333908883762, guid: d2da5f53566a2f1419fad4f8702c9554, type: 3}
+    - enemyName: bat
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 3078066447260828687, guid: 7b2eaeac384a62e4a903401a7bbcda11, type: 3}
+    - enemyName: slime
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 8113727090440078884, guid: 36f9749f521370f478c875a9f931bdda, type: 3}
+    - enemyName: slime
+      enemyCount: 999
+      spawnCount: 0
+      enemyPrefab: {fileID: 7852717934789078804, guid: 049c26e745f5a8a408f58b2941f3e08c, type: 3}
+    waveQuantity: 0
+    spawnCount: 0
+    spawnInterval: 1
   currWaveCount: 0
   waveInterval: 60
   maxEnemiesAllowed: 200
@@ -8329,7 +9219,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &934532264
 MonoBehaviour:
@@ -9487,6 +10377,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5292394415353648834, guid: f05f9587e4915004c9cd2957bc1e8056, type: 3}
   m_PrefabInstance: {fileID: 1003801723}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1012817938
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1255052194}
+    m_Modifications:
+    - target: {fileID: 7069495799411858287, guid: 057247a2b839f00478fd268b3bd4d5ae, type: 3}
+      propertyPath: m_Name
+      value: Dragon(boss)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7069495799411858287, guid: 057247a2b839f00478fd268b3bd4d5ae, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750903337866436712, guid: 057247a2b839f00478fd268b3bd4d5ae, type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750903337866436712, guid: 057247a2b839f00478fd268b3bd4d5ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750903337866436712, guid: 057247a2b839f00478fd268b3bd4d5ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750903337866436712, guid: 057247a2b839f00478fd268b3bd4d5ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750903337866436712, guid: 057247a2b839f00478fd268b3bd4d5ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750903337866436712, guid: 057247a2b839f00478fd268b3bd4d5ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750903337866436712, guid: 057247a2b839f00478fd268b3bd4d5ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750903337866436712, guid: 057247a2b839f00478fd268b3bd4d5ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750903337866436712, guid: 057247a2b839f00478fd268b3bd4d5ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750903337866436712, guid: 057247a2b839f00478fd268b3bd4d5ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750903337866436712, guid: 057247a2b839f00478fd268b3bd4d5ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 057247a2b839f00478fd268b3bd4d5ae, type: 3}
+--- !u!4 &1012817939 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8750903337866436712, guid: 057247a2b839f00478fd268b3bd4d5ae, type: 3}
+  m_PrefabInstance: {fileID: 1012817938}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1015425802
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9880,6 +10836,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045385218}
   m_CullTransparentMesh: 1
+--- !u!1001 &1070144669
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1255052194}
+    m_Modifications:
+    - target: {fileID: 773971782423795350, guid: f5594e8b3e3945a47b42b63bab5a218d, type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 773971782423795350, guid: f5594e8b3e3945a47b42b63bab5a218d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 773971782423795350, guid: f5594e8b3e3945a47b42b63bab5a218d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 773971782423795350, guid: f5594e8b3e3945a47b42b63bab5a218d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 773971782423795350, guid: f5594e8b3e3945a47b42b63bab5a218d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 773971782423795350, guid: f5594e8b3e3945a47b42b63bab5a218d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 773971782423795350, guid: f5594e8b3e3945a47b42b63bab5a218d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 773971782423795350, guid: f5594e8b3e3945a47b42b63bab5a218d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 773971782423795350, guid: f5594e8b3e3945a47b42b63bab5a218d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 773971782423795350, guid: f5594e8b3e3945a47b42b63bab5a218d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 773971782423795350, guid: f5594e8b3e3945a47b42b63bab5a218d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3815937026665283732, guid: f5594e8b3e3945a47b42b63bab5a218d, type: 3}
+      propertyPath: m_Name
+      value: Boar(boss)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3815937026665283732, guid: f5594e8b3e3945a47b42b63bab5a218d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f5594e8b3e3945a47b42b63bab5a218d, type: 3}
+--- !u!4 &1070144670 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 773971782423795350, guid: f5594e8b3e3945a47b42b63bab5a218d, type: 3}
+  m_PrefabInstance: {fileID: 1070144669}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1071961614
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10196,6 +11218,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4676588989259266157, guid: 2e5eac833e120fd499a6f765ca02d96f, type: 3}
   m_PrefabInstance: {fileID: 1132836311}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1133622279
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1255052194}
+    m_Modifications:
+    - target: {fileID: 2624024780543372989, guid: 8eae9fe2120178c4fb453e0396bfd2a5, type: 3}
+      propertyPath: m_Name
+      value: Ghost(boss)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2624024780543372989, guid: 8eae9fe2120178c4fb453e0396bfd2a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8066672003116737620, guid: 8eae9fe2120178c4fb453e0396bfd2a5, type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 8066672003116737620, guid: 8eae9fe2120178c4fb453e0396bfd2a5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8066672003116737620, guid: 8eae9fe2120178c4fb453e0396bfd2a5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8066672003116737620, guid: 8eae9fe2120178c4fb453e0396bfd2a5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8066672003116737620, guid: 8eae9fe2120178c4fb453e0396bfd2a5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8066672003116737620, guid: 8eae9fe2120178c4fb453e0396bfd2a5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8066672003116737620, guid: 8eae9fe2120178c4fb453e0396bfd2a5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8066672003116737620, guid: 8eae9fe2120178c4fb453e0396bfd2a5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8066672003116737620, guid: 8eae9fe2120178c4fb453e0396bfd2a5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8066672003116737620, guid: 8eae9fe2120178c4fb453e0396bfd2a5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8066672003116737620, guid: 8eae9fe2120178c4fb453e0396bfd2a5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8eae9fe2120178c4fb453e0396bfd2a5, type: 3}
+--- !u!4 &1133622280 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8066672003116737620, guid: 8eae9fe2120178c4fb453e0396bfd2a5, type: 3}
+  m_PrefabInstance: {fileID: 1133622279}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1141241930
 GameObject:
   m_ObjectHideFlags: 0
@@ -10466,7 +11554,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 522759953381907696, guid: 233547c5666b9ba46975c587785fb1e0, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 522759953381907696, guid: 233547c5666b9ba46975c587785fb1e0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10579,7 +11667,7 @@ Transform:
   m_Children:
   - {fileID: 1088758342}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1255052193
 GameObject:
@@ -10627,6 +11715,14 @@ Transform:
   - {fileID: 1633628259}
   - {fileID: 1409802801}
   - {fileID: 103376305}
+  - {fileID: 1070144670}
+  - {fileID: 1972938525}
+  - {fileID: 1899407088}
+  - {fileID: 1012817939}
+  - {fileID: 1133622280}
+  - {fileID: 812600989}
+  - {fileID: 1635061595}
+  - {fileID: 1519694988}
   m_Father: {fileID: 878150594}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11467,7 +12563,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5985434976830627566, guid: 15421608a0255ae44bdaa5d9f036afed, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5985434976830627566, guid: 15421608a0255ae44bdaa5d9f036afed, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11638,7 +12734,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1610158994525187770, guid: 90cba7bda00196748924125dd7d58f94, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1610158994525187770, guid: 90cba7bda00196748924125dd7d58f94, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12041,7 +13137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8978449291278373652, guid: 36f9749f521370f478c875a9f931bdda, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8978449291278373652, guid: 36f9749f521370f478c875a9f931bdda, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12431,7 +13527,7 @@ MonoBehaviour:
   - {fileID: 683336369}
   - {fileID: 281428701}
   - {fileID: 763544309}
-  timeLimit: 1800
+  timeLimit: 1200
   stopwatchDisplay: {fileID: 1395525053}
 --- !u!4 &1491977173
 Transform:
@@ -12626,6 +13722,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1512852573}
   m_CullTransparentMesh: 1
+--- !u!1001 &1519694987
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1255052194}
+    m_Modifications:
+    - target: {fileID: 5074950941236564018, guid: b0097eadef6bed3459e64a2a777992b3, type: 3}
+      propertyPath: m_Name
+      value: Reptile Warrior(boss)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5074950941236564018, guid: b0097eadef6bed3459e64a2a777992b3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5898677129879853910, guid: b0097eadef6bed3459e64a2a777992b3, type: 3}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5898677129879853910, guid: b0097eadef6bed3459e64a2a777992b3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5898677129879853910, guid: b0097eadef6bed3459e64a2a777992b3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5898677129879853910, guid: b0097eadef6bed3459e64a2a777992b3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5898677129879853910, guid: b0097eadef6bed3459e64a2a777992b3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5898677129879853910, guid: b0097eadef6bed3459e64a2a777992b3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5898677129879853910, guid: b0097eadef6bed3459e64a2a777992b3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5898677129879853910, guid: b0097eadef6bed3459e64a2a777992b3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5898677129879853910, guid: b0097eadef6bed3459e64a2a777992b3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5898677129879853910, guid: b0097eadef6bed3459e64a2a777992b3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5898677129879853910, guid: b0097eadef6bed3459e64a2a777992b3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b0097eadef6bed3459e64a2a777992b3, type: 3}
+--- !u!4 &1519694988 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5898677129879853910, guid: b0097eadef6bed3459e64a2a777992b3, type: 3}
+  m_PrefabInstance: {fileID: 1519694987}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1539095750
 GameObject:
   m_ObjectHideFlags: 0
@@ -13547,7 +14709,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5898677129879853910, guid: 160432d7780d5f04aae1782571cf0e9b, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5898677129879853910, guid: 160432d7780d5f04aae1782571cf0e9b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13595,6 +14757,72 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5898677129879853910, guid: 160432d7780d5f04aae1782571cf0e9b, type: 3}
   m_PrefabInstance: {fileID: 1633628258}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1635061594
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1255052194}
+    m_Modifications:
+    - target: {fileID: 8337680984500150315, guid: f235fb244a06773419cf974ad47a8eb9, type: 3}
+      propertyPath: m_Name
+      value: Mushroom(boss)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337680984500150315, guid: f235fb244a06773419cf974ad47a8eb9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631186987551635384, guid: f235fb244a06773419cf974ad47a8eb9, type: 3}
+      propertyPath: m_RootOrder
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631186987551635384, guid: f235fb244a06773419cf974ad47a8eb9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631186987551635384, guid: f235fb244a06773419cf974ad47a8eb9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631186987551635384, guid: f235fb244a06773419cf974ad47a8eb9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631186987551635384, guid: f235fb244a06773419cf974ad47a8eb9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631186987551635384, guid: f235fb244a06773419cf974ad47a8eb9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631186987551635384, guid: f235fb244a06773419cf974ad47a8eb9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631186987551635384, guid: f235fb244a06773419cf974ad47a8eb9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631186987551635384, guid: f235fb244a06773419cf974ad47a8eb9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631186987551635384, guid: f235fb244a06773419cf974ad47a8eb9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631186987551635384, guid: f235fb244a06773419cf974ad47a8eb9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f235fb244a06773419cf974ad47a8eb9, type: 3}
+--- !u!4 &1635061595 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8631186987551635384, guid: f235fb244a06773419cf974ad47a8eb9, type: 3}
+  m_PrefabInstance: {fileID: 1635061594}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1641722630
 GameObject:
@@ -14725,7 +15953,7 @@ Transform:
   - {fileID: 1973977181}
   - {fileID: 1327321582}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1702640050
 MonoBehaviour:
@@ -15103,7 +16331,7 @@ Transform:
   - {fileID: 2011368500}
   - {fileID: 998439603}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1732763112
 MonoBehaviour:
@@ -15473,7 +16701,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1796043125
 GameObject:
@@ -15689,7 +16917,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2666424410561312334, guid: 418412b6a00a4894b875ecacfef6f4e7, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2666424410561312334, guid: 418412b6a00a4894b875ecacfef6f4e7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16256,6 +17484,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897180198}
   m_CullTransparentMesh: 1
+--- !u!1001 &1899407087
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1255052194}
+    m_Modifications:
+    - target: {fileID: 3078066447260828684, guid: 7c601cc2b880cad4f97e5f396a77db7c, type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3078066447260828684, guid: 7c601cc2b880cad4f97e5f396a77db7c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3078066447260828684, guid: 7c601cc2b880cad4f97e5f396a77db7c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3078066447260828684, guid: 7c601cc2b880cad4f97e5f396a77db7c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3078066447260828684, guid: 7c601cc2b880cad4f97e5f396a77db7c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3078066447260828684, guid: 7c601cc2b880cad4f97e5f396a77db7c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3078066447260828684, guid: 7c601cc2b880cad4f97e5f396a77db7c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3078066447260828684, guid: 7c601cc2b880cad4f97e5f396a77db7c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3078066447260828684, guid: 7c601cc2b880cad4f97e5f396a77db7c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3078066447260828684, guid: 7c601cc2b880cad4f97e5f396a77db7c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3078066447260828684, guid: 7c601cc2b880cad4f97e5f396a77db7c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3078066447260828687, guid: 7c601cc2b880cad4f97e5f396a77db7c, type: 3}
+      propertyPath: m_Name
+      value: Bat(boss)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3078066447260828687, guid: 7c601cc2b880cad4f97e5f396a77db7c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7c601cc2b880cad4f97e5f396a77db7c, type: 3}
+--- !u!4 &1899407088 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3078066447260828684, guid: 7c601cc2b880cad4f97e5f396a77db7c, type: 3}
+  m_PrefabInstance: {fileID: 1899407087}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1903808996
 GameObject:
   m_ObjectHideFlags: 0
@@ -16758,6 +18052,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1955519741}
   m_CullTransparentMesh: 1
+--- !u!1001 &1972938524
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1255052194}
+    m_Modifications:
+    - target: {fileID: 3971635299829045314, guid: 977308ed64628d0449ab4b4b458ee7e7, type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971635299829045314, guid: 977308ed64628d0449ab4b4b458ee7e7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971635299829045314, guid: 977308ed64628d0449ab4b4b458ee7e7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971635299829045314, guid: 977308ed64628d0449ab4b4b458ee7e7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971635299829045314, guid: 977308ed64628d0449ab4b4b458ee7e7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971635299829045314, guid: 977308ed64628d0449ab4b4b458ee7e7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971635299829045314, guid: 977308ed64628d0449ab4b4b458ee7e7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971635299829045314, guid: 977308ed64628d0449ab4b4b458ee7e7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971635299829045314, guid: 977308ed64628d0449ab4b4b458ee7e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971635299829045314, guid: 977308ed64628d0449ab4b4b458ee7e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971635299829045314, guid: 977308ed64628d0449ab4b4b458ee7e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4806965918829371496, guid: 977308ed64628d0449ab4b4b458ee7e7, type: 3}
+      propertyPath: m_Name
+      value: Dino(boss)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4806965918829371496, guid: 977308ed64628d0449ab4b4b458ee7e7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 977308ed64628d0449ab4b4b458ee7e7, type: 3}
+--- !u!4 &1972938525 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3971635299829045314, guid: 977308ed64628d0449ab4b4b458ee7e7, type: 3}
+  m_PrefabInstance: {fileID: 1972938524}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1973977180
 GameObject:
   m_ObjectHideFlags: 0
@@ -18075,7 +19435,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5207487126235200753, guid: 871cea3fb5519a54cad066cd86e3ccd3, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5207487126235200753, guid: 871cea3fb5519a54cad066cd86e3ccd3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18149,7 +19509,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8066672003116737620, guid: baad8f1d1273b604da46ed6d1690912c, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8066672003116737620, guid: baad8f1d1273b604da46ed6d1690912c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18941,37 +20301,37 @@ MonoBehaviour:
     experienceCapIncrease: 40
   - startLevel: 16
     endLevel: 20
-    experienceCapIncrease: 60
+    experienceCapIncrease: 80
   - startLevel: 21
     endLevel: 25
-    experienceCapIncrease: 80
+    experienceCapIncrease: 100
   - startLevel: 26
     endLevel: 30
-    experienceCapIncrease: 100
+    experienceCapIncrease: 150
   - startLevel: 31
     endLevel: 35
-    experienceCapIncrease: 110
+    experienceCapIncrease: 170
   - startLevel: 36
     endLevel: 40
-    experienceCapIncrease: 120
+    experienceCapIncrease: 190
   - startLevel: 41
     endLevel: 45
-    experienceCapIncrease: 130
+    experienceCapIncrease: 210
   - startLevel: 46
     endLevel: 50
-    experienceCapIncrease: 140
+    experienceCapIncrease: 230
   - startLevel: 51
     endLevel: 55
-    experienceCapIncrease: 150
+    experienceCapIncrease: 250
   - startLevel: 56
     endLevel: 60
-    experienceCapIncrease: 160
+    experienceCapIncrease: 270
   - startLevel: 61
     endLevel: 65
-    experienceCapIncrease: 170
+    experienceCapIncrease: 300
   - startLevel: 66
     endLevel: 70
-    experienceCapIncrease: 180
+    experienceCapIncrease: 350
 --- !u!61 &6056459542897263014
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19014,7 +20374,7 @@ Transform:
   - {fileID: 6056459543284525662}
   - {fileID: 974975007}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6056459543284525657
 GameObject:

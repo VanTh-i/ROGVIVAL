@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8593094cddc53bf46936c51c61a516bf, type: 3}
   m_Name: Mushroom
   m_EditorClassIdentifier: 
-  damage: 4
-  maxHp: 5
+  damage: 5
+  maxHp: 15
   speed: 1.5
   attackRange: 0

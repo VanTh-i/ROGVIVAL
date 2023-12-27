@@ -88,7 +88,7 @@ public class EnemySpawnSystem : MonoBehaviour
             {
                 if (enemyType.spawnCount < enemyType.enemyCount)
                 {
-                    int enemyGroupSize = Random.Range(1, currWaveCount + 3);
+                    int enemyGroupSize = Random.Range(1, currWaveCount + 2);
                     Vector3 spawnPos = player.position + spawnPosition[Random.Range(0, spawnPosition.Count)].position;
                     for (int i = 0; i < enemyGroupSize; i++)
                     {
