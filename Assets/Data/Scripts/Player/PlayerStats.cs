@@ -163,7 +163,7 @@ public class PlayerStats : MonoBehaviour
         //GameManager.Instance.maxHPDisplay.text = "" + currentHp;
         //show chi so
         GameManager.Instance.maxHPDisplay.text = "" + currentMaxHP;
-        GameManager.Instance.recoveryDisplay.text = "" + currentRecovery;
+        GameManager.Instance.recoveryDisplay.text = "" + currentRecovery + "/5s";
         GameManager.Instance.strengthDisplay.text = "+" + currentStrength;
         GameManager.Instance.armorDisplay.text = "+" + currentArmor;
         GameManager.Instance.moveSpeedDisplay.text = "" + currentSpeed.ToString("F2");

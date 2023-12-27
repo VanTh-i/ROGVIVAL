@@ -84,7 +84,6 @@ public class VolumeSettings : MonoBehaviour
 
     public void ToggleMusic()
     {
-        Debug.Log("click");
         isMusicMuted = !isMusicMuted;
         PlayerPrefs.SetInt(MusicMutedKey, isMusicMuted ? 1 : 0);
         ApplyMutedStates();
@@ -93,7 +92,6 @@ public class VolumeSettings : MonoBehaviour
 
     public void ToggleSFX()
     {
-        Debug.Log("click");
         isSFXMuted = !isSFXMuted;
         PlayerPrefs.SetInt(SFXMutedKey, isSFXMuted ? 1 : 0);
         ApplyMutedStates();
