@@ -10,7 +10,6 @@ public class PickUp : MonoBehaviour
         {
             //Destroy(gameObject);
             PickUpSpawn.Instance.DeSpawn(transform);
-            SoundManager.Instance.PlaySFX("Pick Up");
         }
     }
 }

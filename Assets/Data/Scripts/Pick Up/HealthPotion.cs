@@ -9,6 +9,7 @@ public class HealthPotion : PickUp, ICollectible
     {
         PlayerStats player = FindObjectOfType<PlayerStats>();
         player.RestoreHealth(healthToRestore);
+        SoundManager.Instance.PlaySFX("Heal");
         //Destroy(gameObject);
     }
 }

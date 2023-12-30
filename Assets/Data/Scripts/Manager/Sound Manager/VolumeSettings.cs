@@ -16,7 +16,7 @@ public class VolumeSettings : MonoBehaviour
     private bool isSFXMuted;
     public Button musicBtn, SFXBtn;
 
-    private void OnEnable()
+    private void Start()
     {
         LoadVolume();
         MusicBtnStatus();
@@ -49,11 +49,32 @@ public class VolumeSettings : MonoBehaviour
 
     private void ApplyMutedStates()
     {
-        float musicVolume = isMusicMuted ? -80f : PlayerPrefs.GetFloat(MusicVolumeKey);
-        float sfxVolume = isSFXMuted ? -80f : PlayerPrefs.GetFloat(SFXVolumeKey);
+        // float musicVolume = isMusicMuted ? -80f : PlayerPrefs.GetFloat(MusicVolumeKey);
+        // float sfxVolume = isSFXMuted ? -80f : PlayerPrefs.GetFloat(SFXVolumeKey);
 
-        gameMixer.SetFloat("Music", Mathf.Log10(musicVolume) * 20);
-        gameMixer.SetFloat("SFX", Mathf.Log10(sfxVolume) * 20);
+        // gameMixer.SetFloat("Music", Mathf.Log10(musicVolume) * 20);
+        // gameMixer.SetFloat("SFX", Mathf.Log10(sfxVolume) * 20);
+        if (isMusicMuted)
+        {
+            gameMixer.SetFloat("Music", -80f);
+        }
+        else
+        {
+            float volume = PlayerPrefs.GetFloat(MusicVolumeKey);
+            gameMixer.SetFloat("Music", Mathf.Log10(volume) * 20);
+        }
+
+
+        if (isSFXMuted)
+        {
+            gameMixer.SetFloat("SFX", -80f);
+        }
+        else
+        {
+            float volume = PlayerPrefs.GetFloat(SFXVolumeKey);
+            gameMixer.SetFloat("SFX", Mathf.Log10(volume) * 20);
+        }
+
     }
 
     public void SetMusicVolume()
@@ -86,7 +107,19 @@ public class VolumeSettings : MonoBehaviour
     {
         isMusicMuted = !isMusicMuted;
         PlayerPrefs.SetInt(MusicMutedKey, isMusicMuted ? 1 : 0);
+
+        // if (isMusicMuted)
+        // {
+        //     gameMixer.SetFloat("Music", -80f);
+        // }
+        // else
+        // {
+        //     float volume = PlayerPrefs.GetFloat(MusicVolumeKey);
+        //     gameMixer.SetFloat("Music", Mathf.Log10(volume) * 20);
+        // }
+
         ApplyMutedStates();
+        //LoadMutedStates();
         MusicBtnStatus();
     }
 
@@ -94,7 +127,19 @@ public class VolumeSettings : MonoBehaviour
     {
         isSFXMuted = !isSFXMuted;
         PlayerPrefs.SetInt(SFXMutedKey, isSFXMuted ? 1 : 0);
+
+        // if (isSFXMuted)
+        // {
+        //     gameMixer.SetFloat("SFX", -80f);
+        // }
+        // else
+        // {
+        //     float volume = PlayerPrefs.GetFloat(SFXVolumeKey);
+        //     gameMixer.SetFloat("SFX", Mathf.Log10(volume) * 20);
+        // }
+
         ApplyMutedStates();
+        //LoadMutedStates();
         SFXBtnStatus();
     }
 

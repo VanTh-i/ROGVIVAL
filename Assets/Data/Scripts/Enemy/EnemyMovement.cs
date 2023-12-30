@@ -70,12 +70,18 @@ public class EnemyMovement : ThaiBehaviour
         if (rot_z > 90 || rot_z < -90)
         {
             //aimDir.x = transform.parent.localScale.x * (-1f);
-            aimDir.x = -Mathf.Abs(transform.parent.localScale.x);
+            if (aimDir.x != -Mathf.Abs(transform.parent.localScale.x))
+            {
+                aimDir.x = -Mathf.Abs(transform.parent.localScale.x);
+            }
 
         }
         else
         {
-            aimDir.x = Mathf.Abs(transform.parent.localScale.x);
+            if (aimDir.x != Mathf.Abs(transform.parent.localScale.x))
+            {
+                aimDir.x = Mathf.Abs(transform.parent.localScale.x);
+            }
         }
         enemyDir.localScale = aimDir;
 

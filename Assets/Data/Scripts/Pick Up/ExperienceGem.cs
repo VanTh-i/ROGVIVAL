@@ -9,6 +9,7 @@ public class ExperienceGem : PickUp, ICollectible
     {
         PlayerStats playerStats = FindObjectOfType<PlayerStats>();
         playerStats.IncreaseExperience(experienceGranted);
+        SoundManager.Instance.PlaySFX("Pick Up");
         //Destroy(gameObject);
     }
 }

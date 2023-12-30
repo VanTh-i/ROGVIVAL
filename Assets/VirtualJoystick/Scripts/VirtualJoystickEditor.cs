@@ -1,23 +1,33 @@
 ﻿using UnityEngine;
+
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
+
 using System.Linq;
 using System.Collections.Generic;
 
-namespace Terresquall {
+namespace Terresquall
+{
+#if UNITY_EDITOR
     [CustomEditor(typeof(VirtualJoystick))]
-    public class VirtualJoystickEditor : Editor {    //    // Links to the script object.
+
+    public class VirtualJoystickEditor : Editor
+    {    //    // Links to the script object.
 
         VirtualJoystick joystick;
         RectTransform rectTransform;
 
         private int scaleFactor;
 
-        void OnEnable() {
+        void OnEnable()
+        {
             joystick = target as VirtualJoystick;
             rectTransform = joystick.GetComponent<RectTransform>();
         }
 
-        override public void OnInspectorGUI() {
+        override public void OnInspectorGUI()
+        {
             DrawDefaultInspector();
 
             //Increase Decrease buttons
@@ -25,12 +35,14 @@ namespace Terresquall {
             EditorGUILayout.LabelField("Size Adjustments");
             GUILayout.BeginHorizontal();
             int gcd = Mathf.RoundToInt(FindGCD((int)rectTransform.sizeDelta.x, (int)joystick.controlStick.rectTransform.sizeDelta.x));
-            if (GUILayout.Button("Increase Size", EditorStyles.miniButtonLeft)) {
+            if (GUILayout.Button("Increase Size", EditorStyles.miniButtonLeft))
+            {
                 RecordSizeChangeUndo(rectTransform, joystick, joystick.controlStick, joystick.controlStick.rectTransform);
                 rectTransform.sizeDelta += rectTransform.sizeDelta / new Vector2(gcd, gcd);
                 joystick.controlStick.rectTransform.sizeDelta += joystick.controlStick.rectTransform.sizeDelta / new Vector2(gcd, gcd);
             }
-            if (GUILayout.Button("Decrease Size", EditorStyles.miniButtonRight)) {
+            if (GUILayout.Button("Decrease Size", EditorStyles.miniButtonRight))
+            {
                 RecordSizeChangeUndo(rectTransform, joystick, joystick.controlStick, joystick.controlStick.rectTransform);
                 rectTransform.sizeDelta -= rectTransform.sizeDelta / new Vector2(gcd, gcd);
                 joystick.controlStick.rectTransform.sizeDelta -= joystick.controlStick.rectTransform.sizeDelta / new Vector2(gcd, gcd);
@@ -92,26 +104,33 @@ namespace Terresquall {
         }
 
         // Function to return gcd of a and b
-        int GCD(int a, int b) {
+        int GCD(int a, int b)
+        {
             if (b == 0) return a;
             return GCD(b, a % b);
         }
 
         // Function to find gcd of array of numbers
-        int FindGCD(params int[] numbers) {
-            if (numbers.Length == 0) {
+        int FindGCD(params int[] numbers)
+        {
+            if (numbers.Length == 0)
+            {
                 Debug.LogError("No numbers provided");
                 return 0; // or handle the error in an appropriate way
             }
 
             int result = numbers[0];
-            for (int i = 1; i < numbers.Length; i++) {
+            for (int i = 1; i < numbers.Length; i++)
+            {
 
                 result = GCD(result, numbers[i]);
 
-                if (result == 1) {
+                if (result == 1)
+                {
                     return 1;
-                } else if (result <= 0) {
+                }
+                else if (result <= 0)
+                {
                     Debug.LogError("The size value for one or more of the Joystick elements is not more than 0");
                     // You might want to handle this error in an appropriate way
                     return 0; // or handle the error in an appropriate way
@@ -120,10 +139,13 @@ namespace Terresquall {
             return result;
         }
 
-        void RecordSizeChangeUndo(params Object[] arguments) {
-            for (int i = 0; i < arguments.Length; i++) {
+        void RecordSizeChangeUndo(params Object[] arguments)
+        {
+            for (int i = 0; i < arguments.Length; i++)
+            {
                 Undo.RecordObject(arguments[i], "Undo Stuff");
             }
         }
     }
+#endif
 }

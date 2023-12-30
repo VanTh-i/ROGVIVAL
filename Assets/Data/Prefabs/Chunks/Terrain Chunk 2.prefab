@@ -410,16 +410,10 @@ MonoBehaviour:
   - {fileID: 7540727120638282278}
   - {fileID: 7540727121441657115}
   propPrefabs:
-  - {fileID: 4662054784396951693, guid: b9bba4525a06e644ba24dba0576a1ab9, type: 3}
-  - {fileID: 1165754584391974106, guid: e97339b2ded1b6a408f9aae1d9785d80, type: 3}
-  - {fileID: 7738889539677322968, guid: ad96b7ccfeeaf364ab31a0584ce33369, type: 3}
-  - {fileID: 1009064104077763135, guid: 2a20c7d683bfa3242a5b1dc8b35f926f, type: 3}
   - {fileID: 1538836449468704442, guid: 6c6829a0c5370754dba16db7b1ee217e, type: 3}
   - {fileID: 5335606264994490659, guid: 8c12c7c95b364fa4f8465a6fecbb26ba, type: 3}
   - {fileID: 1781944601569148581, guid: 98fde725fc904ef41abd33816bfb042e, type: 3}
   - {fileID: 2842082069039130047, guid: b4cd02d3aa3016a4ea5c1d0f22f301ee, type: 3}
-  - {fileID: 7018586029491051614, guid: a37858b9132ca00469c2013a5e25f54d, type: 3}
-  - {fileID: 1835969775199000385, guid: 7b919fb5a50ed3a448f95ebf285345d5, type: 3}
 --- !u!1 &7540727120244676263
 GameObject:
   m_ObjectHideFlags: 0

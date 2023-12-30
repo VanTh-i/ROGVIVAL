@@ -7,6 +7,7 @@ public class IronHeart : PassiveItem
     protected override void ApplyModifier()
     {
         playerStats.CurrentMaxHP += (int)passiveItemData.Multipler;
+        playerStats.CurrentHp += (int)passiveItemData.Multipler;
         playerStats.UpdateHealthBar();
     }
 }

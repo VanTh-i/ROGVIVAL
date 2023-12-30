@@ -14,12 +14,12 @@ public class TitleSceneManager : MonoBehaviour
         audioPanelUI.SetActive(false);
         chatGPTUI.SetActive(false);
 
-        SoundManager.Instance.PlayMusic("Title Theme");
         if (PlayerPrefs.GetInt("MusicMuted") == 1)
         {
             volumeSett.gameMixer.SetFloat("Music", Mathf.Log10(-80f) * 20);
             volumeSett.MusicBtnStatus();
         }
+        SoundManager.Instance.PlayMusic("Title Theme");
     }
     public void Setting()
     {
