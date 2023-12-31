@@ -29,7 +29,10 @@ public class SwordProjectile : EnemyImpact
 
     private void Start()
     {
-        transform.parent.localScale += new Vector3(sword.currRange, sword.currRange, sword.currRange);
+        if (transform.parent.localScale != new Vector3(sword.currRange, sword.currRange, sword.currRange))
+        {
+            transform.parent.localScale += new Vector3(sword.currRange, sword.currRange, sword.currRange);
+        }
     }
 
     protected override void OnTriggerEnter2D(Collider2D other)

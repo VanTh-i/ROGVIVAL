@@ -15,9 +15,9 @@ public class SoundManager : MonoBehaviour
         public AudioClip clip;
     }
     public List<Sound> musicSounds, sfxSounds;
-
     public AudioSource musicSource, SFXSource;
-
+    private Dictionary<string, Sound> musicDictionary = new Dictionary<string, Sound>();
+    private Dictionary<string, Sound> sfxDictionary = new Dictionary<string, Sound>();
 
     private void Awake()
     {
@@ -31,32 +31,52 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
         }
 
+        foreach (Sound music in musicSounds)
+        {
+            musicDictionary.Add(music.name, music);
+        }
+
+        foreach (Sound sfx in sfxSounds)
+        {
+            sfxDictionary.Add(sfx.name, sfx);
+        }
+
     }
 
     public void PlayMusic(string name)
     {
-        Sound music = musicSounds.Find(sound => sound.name == name);
-        if (music == null)
+        // Sound music = musicSounds.Find(sound => sound.name == name);
+        // if (music == null)
+        // {
+        //     Debug.LogWarning("Không tìm thấy âm thanh có tên " + name);
+        // }
+        // else
+        // {
+        //     musicSource.clip = music.clip;
+        //     musicSource.Play();
+        // }
+        if (musicDictionary.ContainsKey(name))
         {
-            Debug.LogWarning("Không tìm thấy âm thanh có tên " + name);
+            Sound music = musicDictionary[name];
+            musicSource.clip = music.clip;
+            musicSource.Play();
         }
         else
         {
-            musicSource.clip = music.clip;
-            musicSource.Play();
+            Debug.LogWarning("Không tìm thấy âm thanh có tên " + name);
         }
     }
 
     public void PlaySFX(string name)
     {
-        Sound sfx = sfxSounds.Find(sound => sound.name == name);
-        if (sfx == null)
+        if (sfxDictionary.ContainsKey(name))
         {
-            Debug.LogWarning("Không tìm thấy âm thanh có tên " + name);
+            Sound sfx = sfxDictionary[name];
+            SFXSource.PlayOneShot(sfx.clip);
         }
         else
         {
-            SFXSource.PlayOneShot(sfx.clip);
+            Debug.LogWarning("Không tìm thấy âm thanh có tên " + name);
         }
     }
 

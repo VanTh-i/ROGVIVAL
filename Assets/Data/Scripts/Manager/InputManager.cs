@@ -34,8 +34,8 @@ public class InputManager : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        GetMousePos();
-        MoveInput();
+        //GetMousePos();
+        //MoveInput();
         MobileInput();
     }
 

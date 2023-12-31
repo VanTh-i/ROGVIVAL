@@ -12,6 +12,7 @@ public class Sword : WeaponController
     {
         //swordDirection = InputManager.Instance.MoveDir;
         swordDirection = InputManager.Instance.MobileMoveDir;
+
         if (swordDirection.x != 0)
         {
             lastHorizontalVector = swordDirection.x;

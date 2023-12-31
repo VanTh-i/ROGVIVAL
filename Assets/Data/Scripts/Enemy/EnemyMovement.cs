@@ -46,8 +46,8 @@ public class EnemyMovement : ThaiBehaviour
             }
             else
             {
-                transform.parent.position += transform.forward * enemyStats.currentSpeed * Time.deltaTime;
-
+                //transform.parent.position += transform.forward * enemyStats.currentSpeed * Time.deltaTime;
+                transform.parent.position = Vector3.MoveTowards(transform.parent.position, player.position, enemyStats.currentSpeed * Time.deltaTime);
             }
         }
         else

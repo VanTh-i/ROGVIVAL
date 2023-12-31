@@ -311,7 +311,7 @@ public class PlayerStats : MonoBehaviour
 
     public void SpawnWeapon(GameObject weapon)
     {
-        if (weaponIndex >= inventory.listWeaponSlots.Count - 1)
+        if (weaponIndex > inventory.listWeaponSlots.Count - 1)
         {
             Debug.LogWarning("Inventory is full");
             return;
@@ -323,7 +323,7 @@ public class PlayerStats : MonoBehaviour
     }
     public void SpawnPassiveItem(GameObject passiveItem)
     {
-        if (passiveItemIndex >= inventory.listPassiveItemSlots.Count - 1)
+        if (passiveItemIndex > inventory.listPassiveItemSlots.Count - 1)
         {
             Debug.LogWarning("Inventory is full");
             return;
