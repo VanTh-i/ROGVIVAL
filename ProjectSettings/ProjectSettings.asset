@@ -159,7 +159,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 3.4
   applicationIdentifier:
-    Android: com.Thaiqtdh1b.Thai
+    Android: com.Thaiqtdh1b.ROGVIVAL
     Standalone: com.DefaultCompany.2DProject
   buildNumber:
     Standalone: 0
@@ -167,8 +167,8 @@ PlayerSettings:
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 22
-  AndroidTargetSdkVersion: 0
+  AndroidMinSdkVersion: 24
+  AndroidTargetSdkVersion: 30
   AndroidPreferredInstallLocation: 1
   aotOptions: 
   stripEngineCode: 1

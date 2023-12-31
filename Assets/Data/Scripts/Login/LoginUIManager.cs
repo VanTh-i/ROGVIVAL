@@ -4,9 +4,24 @@ using UnityEngine;
 
 public class LoginUIManager : MonoBehaviour
 {
+    private static LoginUIManager instance;
+    public static LoginUIManager Instance { get => instance; }
+
     public GameObject loginUI;
     public GameObject registerUI;
 
+    private void Awake()
+    {
+
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != null)
+        {
+            Destroy(this);
+        }
+    }
     private void Start()
     {
         loginUI.SetActive(true);
