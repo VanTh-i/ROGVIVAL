@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "837940246308",
+    "project_id": "rogvival",
+    "storage_bucket": "rogvival.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:837940246308:android:bdeab818c5c5be04d365b1",
+        "android_client_info": {
+          "package_name": "com.Thaiqtdh1b.ROGVIVAL"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgGcOFbKRrNecNEXi7r_odGt9g_zKeFAU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
