@@ -24,8 +24,13 @@ public class LoginUIManager : MonoBehaviour
     }
     private void Start()
     {
-        loginUI.SetActive(true);
+        loginUI.SetActive(false);
         registerUI.SetActive(false);
+    }
+
+    public void LoginBtn()
+    {
+        loginUI.SetActive(!loginUI.activeSelf);
     }
 
     public void LoginScreen()

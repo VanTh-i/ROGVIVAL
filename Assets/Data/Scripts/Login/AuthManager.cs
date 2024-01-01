@@ -5,6 +5,7 @@ using Firebase;
 using Firebase.Auth;
 using TMPro;
 using System.Threading.Tasks;
+using UnityEngine.UI;
 
 
 public class AuthManager : MonoBehaviour
@@ -30,22 +31,69 @@ public class AuthManager : MonoBehaviour
     public TMP_InputField passwordRegisterVerifyField;
     public TMP_Text warningRegisterText;
 
-    void Awake()
+    [Header("UI")]
+    public Button loginBtn;
+    public Button logoutBtn;
+    public GameObject profile;
+
+    // void Awake()
+    // {
+    //     //Check that all of the necessary dependencies for Firebase are present on the system
+    //     FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
+    //     {
+    //         dependencyStatus = task.Result;
+    //         if (dependencyStatus == DependencyStatus.Available)
+    //         {
+    //             //If they are avalible Initialize Firebase
+    //             InitializeFirebase();
+    //         }
+    //         else
+    //         {
+    //             Debug.LogError("Could not resolve all Firebase dependencies: " + dependencyStatus);
+    //         }
+    //     });
+    // }
+
+    private void Start()
     {
-        //Check that all of the necessary dependencies for Firebase are present on the system
-        FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
+        StartCoroutine(CheckAndFixDependenciesAsync());
+    }
+
+    void Update()
+    {
+        if (auth != null && User != null)
         {
-            dependencyStatus = task.Result;
-            if (dependencyStatus == DependencyStatus.Available)
-            {
-                //If they are avalible Initialize Firebase
-                InitializeFirebase();
-            }
-            else
-            {
-                Debug.LogError("Could not resolve all Firebase dependencies: " + dependencyStatus);
-            }
-        });
+            loginBtn.gameObject.SetActive(false);
+            logoutBtn.gameObject.SetActive(true);
+            profile.gameObject.SetActive(true);
+        }
+        else
+        {
+            loginBtn.gameObject.SetActive(true);
+            logoutBtn.gameObject.SetActive(false);
+            profile.gameObject.SetActive(false);
+        }
+    }
+
+    private IEnumerator CheckAndFixDependenciesAsync()
+    {
+        var dependencyTask = FirebaseApp.CheckAndFixDependenciesAsync();
+
+        yield return new WaitUntil(() => dependencyTask.IsCompleted);
+
+        dependencyStatus = dependencyTask.Result;
+        if (dependencyStatus == DependencyStatus.Available)
+        {
+            //If they are avalible Initialize Firebase
+            InitializeFirebase();
+            yield return new WaitForEndOfFrame();
+            StartCoroutine(CheckForAutoLogin());
+        }
+        else
+        {
+            Debug.LogError("Could not resolve all Firebase dependencies: " + dependencyStatus);
+        }
+
     }
 
     private void InitializeFirebase()
@@ -53,6 +101,74 @@ public class AuthManager : MonoBehaviour
         Debug.Log("Setting up Firebase Auth");
         //Set the authentication instance object
         auth = FirebaseAuth.DefaultInstance;
+
+        auth.StateChanged += AuthStateChanged;
+        AuthStateChanged(this, null);
+    }
+
+    private IEnumerator CheckForAutoLogin()
+    {
+
+        if (User != null)
+        {
+            Debug.Log("auto log");
+            var reloadUserTask = User.ReloadAsync();
+            yield return new WaitUntil(() => reloadUserTask.IsCompleted);
+            AutoLogin();
+        }
+        else
+        {
+            Debug.Log("not auto log");
+            //LoginUIManager.Instance.LoginScreen();
+        }
+    }
+
+    private void AutoLogin()
+    {
+        if (User != null)
+        {
+            LogToTitleScreen();
+        }
+        else
+        {
+            //LoginUIManager.Instance.LoginScreen();
+        }
+    }
+
+    void AuthStateChanged(object sender, System.EventArgs eventArgs)
+    {
+        if (auth.CurrentUser != User)
+        {
+            bool signedIn = User != auth.CurrentUser && auth.CurrentUser != null;
+
+            if (!signedIn && User != null)
+            {
+                Debug.Log("Signed out " + User.UserId);
+
+            }
+
+            User = auth.CurrentUser;
+
+            if (signedIn)
+            {
+                Debug.Log("Signed in " + User.UserId);
+
+                if (User != null)
+                {
+                    string displayName = User.DisplayName;
+                    profile.gameObject.GetComponentInChildren<TMP_Text>().text = displayName;
+                }
+
+            }
+        }
+    }
+
+    public void LogoutButton()
+    {
+        if (auth != null && User != null)
+        {
+            auth.SignOut();
+        }
     }
 
     //Function for the login button
@@ -111,13 +227,20 @@ public class AuthManager : MonoBehaviour
             Debug.LogFormat("User signed in successfully: {0} ({1})", User.DisplayName, User.Email);
             warningLoginText.text = "";
             confirmLoginText.text = "Logged In";
-            Invoke("LogToTitleScreen", 1f);
+            LogToTitleScreen();
         }
     }
 
     private void LogToTitleScreen()
     {
         LoginUIManager.Instance.loginUI.gameObject.SetActive(false);
+        LoginUIManager.Instance.registerUI.gameObject.SetActive(false);
+
+        if (User != null)
+        {
+            string displayName = User.DisplayName;
+            profile.gameObject.GetComponentInChildren<TMP_Text>().text = displayName;
+        }
     }
 
     private IEnumerator Register(string _email, string _password, string _username)
@@ -192,8 +315,8 @@ public class AuthManager : MonoBehaviour
                     {
                         //Username is now set
                         //Now return to login screen
-                        LoginUIManager.Instance.LoginScreen();
-                        warningRegisterText.text = "";
+                        warningRegisterText.text = "Successful";
+                        LogToTitleScreen();
                     }
                 }
             }
