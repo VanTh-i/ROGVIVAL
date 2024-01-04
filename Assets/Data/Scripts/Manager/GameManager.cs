@@ -52,6 +52,8 @@ public class GameManager : MonoBehaviour
     [Header("Stopwatch")]
     public float timeLimit;
     private float stopwatchTime;
+    public float StopwatchTime { get => stopwatchTime; private set => stopwatchTime = value; }
+
     public TextMeshProUGUI stopwatchDisplay;
 
     private void Awake()

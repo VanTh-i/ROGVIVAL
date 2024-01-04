@@ -1,7 +1,7 @@
 {
   "project_info": {
-    "firebase_url": "null",
     "project_number": "837940246308",
+    "firebase_url": "https://rogvival-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "rogvival",
     "storage_bucket": "rogvival.appspot.com"
   },

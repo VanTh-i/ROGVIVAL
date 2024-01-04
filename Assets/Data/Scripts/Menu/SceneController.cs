@@ -17,6 +17,7 @@ public class SceneController : MonoBehaviour
     {
         SceneManager.LoadScene(0);
         SoundManager.Instance.PlaySFX("Button");
+        Time.timeScale = 1f;
         SoundManager.Instance.musicSource.Stop();
     }
     public void ExitGame()
