@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI moveSpeedDisplay;
 
     [Header("Result UI")]
+    public TextMeshProUGUI resultTitle;
     public TextMeshProUGUI timeSurvivalDisplay;
     public Image chosenCharacters;
     public TextMeshProUGUI charactersName;
@@ -166,6 +167,7 @@ public class GameManager : MonoBehaviour
         SoundManager.Instance.PlaySFX("Game Over");
         SoundManager.Instance.musicSource.Stop();
         timeSurvivalDisplay.text = stopwatchDisplay.text;
+        resultTitle.text = "Game Over";
         ChangeState(GameState.GameOver);
     }
     private void DisplayResults()
@@ -212,6 +214,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void Victory()
+    {
+        SoundManager.Instance.PlaySFX("Victory");
+        SoundManager.Instance.musicSource.Stop();
+        timeSurvivalDisplay.text = stopwatchDisplay.text;
+        resultTitle.text = "Victory";
+        ChangeState(GameState.GameOver);
+    }
+
     private void UpdateStopwatch()
     {
         stopwatchTime += Time.deltaTime;
@@ -219,11 +230,10 @@ public class GameManager : MonoBehaviour
 
         if (stopwatchTime >= timeLimit)
         {
-            //GameOver();
-            // victory, fix late
-            playerObject.SendMessage("PlayerDead");
+            playerObject.SendMessage("PlayerVictory");
         }
     }
+
     private void UpdateStopwatchTimeDisplay()
     {
         int min = Mathf.FloorToInt(stopwatchTime / 60);

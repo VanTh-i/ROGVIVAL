@@ -260,6 +260,11 @@ public class PlayerStats : MonoBehaviour
             GameManager.Instance.GameOver();
         }
     }
+    public void PlayerVictory()
+    {
+        GameManager.Instance.ChosenWeaponAndPassiveItemUI(inventory.weaponUISlots, inventory.passiveItemUiSlots);
+        GameManager.Instance.Victory();
+    }
 
     public void RestoreHealth(int amount)
     {

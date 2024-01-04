@@ -36,24 +36,6 @@ public class AuthManager : MonoBehaviour
     public Button logoutBtn;
     public GameObject profile;
 
-    // void Awake()
-    // {
-    //     //Check that all of the necessary dependencies for Firebase are present on the system
-    //     FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
-    //     {
-    //         dependencyStatus = task.Result;
-    //         if (dependencyStatus == DependencyStatus.Available)
-    //         {
-    //             //If they are avalible Initialize Firebase
-    //             InitializeFirebase();
-    //         }
-    //         else
-    //         {
-    //             Debug.LogError("Could not resolve all Firebase dependencies: " + dependencyStatus);
-    //         }
-    //     });
-    // }
-
     private void Start()
     {
         StartCoroutine(CheckAndFixDependenciesAsync());
@@ -198,7 +180,7 @@ public class AuthManager : MonoBehaviour
             FirebaseException firebaseEx = LoginTask.Exception.GetBaseException() as FirebaseException;
             AuthError errorCode = (AuthError)firebaseEx.ErrorCode;
 
-            string message = "Wrong Email or Password";
+            string message = "Login Failed!";
             switch (errorCode)
             {
                 case AuthError.MissingEmail:
