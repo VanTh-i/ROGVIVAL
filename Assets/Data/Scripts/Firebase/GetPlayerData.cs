@@ -91,6 +91,8 @@ public class GetPlayerData : MonoBehaviour
     public void SaveDataButton()
     {
         int stopwatchTimeSave = (int)GameManager.Instance.StopwatchTime;
+        int currentCoin = GameManager.Instance.Coin;
+        StartCoroutine(UpdateCoin(currentCoin));
         StartCoroutine(CheckAndUpdateTimeSurvive(stopwatchTimeSave));
     }
 
@@ -156,6 +158,48 @@ public class GetPlayerData : MonoBehaviour
         }
         yield return new WaitForEndOfFrame();
         LoadToMenu();
+    }
+
+    private IEnumerator UpdateCoin(int value)
+    {
+        if (User != null)
+        {
+            Task<DataSnapshot> getCoinTask = DBreference.Child("users").Child(User.UserId).Child("Coin").GetValueAsync();
+            yield return new WaitUntil(() => getCoinTask.IsCompleted);
+
+            if (getCoinTask.Exception != null)
+            {
+                Debug.LogWarning($"Failed to get Coin with {getCoinTask.Exception}");
+                yield break;
+            }
+
+            int currentCoin = 0;
+            DataSnapshot snapshot = getCoinTask.Result;
+            if (snapshot != null && snapshot.Value != null)
+            {
+                currentCoin = int.Parse(snapshot.Value.ToString());
+            }
+
+            int newCoinValue = currentCoin + value;
+
+            //Set the currently logged in user
+            Task DBTask = DBreference.Child("users").Child(User.UserId).Child("Coin").SetValueAsync(newCoinValue);
+
+            yield return new WaitUntil(predicate: () => DBTask.IsCompleted);
+
+            if (DBTask.Exception != null)
+            {
+                Debug.LogWarning(message: $"Failed to register task with {DBTask.Exception}");
+            }
+            else
+            {
+                //Xp is now updated
+            }
+        }
+        else
+        {
+            Debug.Log("ko dang nhap user, ko luu tien");
+        }
     }
 
     private void LoadToMenu()

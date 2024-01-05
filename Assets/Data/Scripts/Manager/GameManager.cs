@@ -18,15 +18,18 @@ public class GameManager : MonoBehaviour
         LevelUp
     };
 
+    [SerializeField] private int coin;
+    public int Coin { get => coin; set => coin = value; }
     public bool isGameOver = false;
-    public bool choosingUpgrade;
+    [HideInInspector] public bool choosingUpgrade;
     public GameObject playerObject;
     public CanvasGroup joystickFade;
 
     public GameState currentState;
-    public GameState previousState;
+    [HideInInspector] public GameState previousState;
 
     [Header("UI")]
+    public TMP_Text coinText;
     public GameObject pauseScreen;
     public GameObject resultsScreen;
     public GameObject levelUpScreen;
@@ -53,7 +56,6 @@ public class GameManager : MonoBehaviour
     public float timeLimit;
     private float stopwatchTime;
     public float StopwatchTime { get => stopwatchTime; private set => stopwatchTime = value; }
-
     public TextMeshProUGUI stopwatchDisplay;
 
     private void Awake()
@@ -82,10 +84,13 @@ public class GameManager : MonoBehaviour
     {
         SoundManager.Instance.musicSource.Stop();
         SoundManager.Instance.PlayMusic("Theme");
+        coinText.text = Coin.ToString();
     }
 
     private void Update()
     {
+        coinText.text = Coin.ToString();
+
         switch (currentState)
         {
             case GameState.GamePlay:

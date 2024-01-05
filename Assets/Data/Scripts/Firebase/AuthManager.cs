@@ -41,7 +41,8 @@ public class AuthManager : MonoBehaviour
 
     [Header("UserData")]
     public TMP_Text usernameText;
-    public TMP_InputField timeField;
+    public TMP_Text userCoin;
+    public TMP_Text timeField;
 
     private void Start()
     {
@@ -190,6 +191,7 @@ public class AuthManager : MonoBehaviour
     {
         //Call the register coroutine passing the email, password, and username
         StartCoroutine(Register(emailRegisterField.text, passwordRegisterField.text, usernameRegisterField.text));
+        LoadUserData();
     }
 
     private IEnumerator Login(string _email, string _password)
@@ -246,6 +248,7 @@ public class AuthManager : MonoBehaviour
         LoginUIManager.Instance.registerUI.gameObject.SetActive(false);
         StartCoroutine(UpdateUsernameAuth(usernameText.text));
         StartCoroutine(UpdateUsernameDatabase(usernameText.text));
+        StartCoroutine(LoadUserData());
     }
 
     private IEnumerator Register(string _email, string _password, string _username)
@@ -380,14 +383,19 @@ public class AuthManager : MonoBehaviour
         else if (DBTask.Result.Value == null)
         {
             //No data exists yet
-            timeField.text = "0";
+            timeField.text = "00:00";
+            userCoin.text = "0";
         }
         else
         {
             //Data has been retrieved
             DataSnapshot snapshot = DBTask.Result;
 
-            timeField.text = snapshot.Child("Survival time").Value.ToString();
+            string timeSurvFormat = snapshot.Child("Survival time").Value.ToString();
+            int min = Mathf.FloorToInt(Convert.ToSingle(timeSurvFormat) / 60);
+            int sec = Mathf.FloorToInt(Convert.ToSingle(timeSurvFormat) % 60);
+            timeField.text = string.Format("{0:00}:{1:00}", min, sec);
+            userCoin.text = snapshot.Child("Coin").Value.ToString();
         }
     }
     public void LoadUserDataBtn()

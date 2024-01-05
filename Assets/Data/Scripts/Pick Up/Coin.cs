@@ -2,17 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Coin : MonoBehaviour
+public class Coin : PickUp, ICollectible
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Collect()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Debug.Log("get coin");
+        GameManager.Instance.Coin += 1;
+        SoundManager.Instance.PlaySFX("Pick Up");
     }
 }

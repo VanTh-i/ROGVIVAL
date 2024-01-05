@@ -290,3 +290,6 @@ MonoBehaviour:
   - name: Red Gem
     itemPrefab: {fileID: 6143026828224880271, guid: cced19346d80bbc42951acfa5f4af07a, type: 3}
     dropRate: 5
+  - name: Coin
+    itemPrefab: {fileID: 8154338237969069081, guid: e383f6c2af50bbb479aa61e74224aa42, type: 3}
+    dropRate: 100
