@@ -8,6 +8,7 @@ using Firebase.Database;
 using TMPro;
 using System.Threading.Tasks;
 using UnityEngine.UI;
+using System.Linq;
 
 
 public class AuthManager : MonoBehaviour
@@ -43,6 +44,8 @@ public class AuthManager : MonoBehaviour
     public TMP_Text usernameText;
     public TMP_Text userCoin;
     public TMP_Text timeField;
+    public GameObject scoreElement;
+    public Transform scoreboardContent;
 
     private void Start()
     {
@@ -169,6 +172,11 @@ public class AuthManager : MonoBehaviour
     //     int stopwatchTimeSave = (int)GameManager.Instance.StopwatchTime;
     //     StartCoroutine(UpdateTimeSurvive(stopwatchTimeSave));
     // }
+
+    public void ScoreboardButton()
+    {
+        StartCoroutine(LoadScoreboardData());
+    }
 
     public void LogoutButton()
     {
@@ -380,11 +388,13 @@ public class AuthManager : MonoBehaviour
         {
             Debug.LogWarning(message: $"Failed to register task with {DBTask.Exception}");
         }
-        else if (DBTask.Result.Value == null)
+        //else if (DBTask.Result.Value == null)
+        else if (DBTask.Result.Child("Coin").Value == null && DBTask.Result.Child("Survival time").Value == null)
         {
             //No data exists yet
-            timeField.text = "00:00";
+            timeField.text = "0";
             userCoin.text = "0";
+            Debug.Log("not have coin and time");
         }
         else
         {
@@ -396,11 +406,52 @@ public class AuthManager : MonoBehaviour
             int sec = Mathf.FloorToInt(Convert.ToSingle(timeSurvFormat) % 60);
             timeField.text = string.Format("{0:00}:{1:00}", min, sec);
             userCoin.text = snapshot.Child("Coin").Value.ToString();
+            Debug.Log("have coin and time");
         }
     }
     public void LoadUserDataBtn()
     {
         if (User == null) return; //todo: sua lai khong cho an vao khi chua co nguoi dung
         StartCoroutine(LoadUserData());
+    }
+
+    private IEnumerator LoadScoreboardData()
+    {
+        //Get all the users data ordered by kills amount
+        Task<DataSnapshot> DBTask = DBreference.Child("users").OrderByChild("Survival time").GetValueAsync();
+
+        yield return new WaitUntil(predicate: () => DBTask.IsCompleted);
+
+        if (DBTask.Exception != null)
+        {
+            Debug.LogWarning(message: $"Failed to register task with {DBTask.Exception}");
+        }
+        else
+        {
+            //Data has been retrieved
+            DataSnapshot snapshot = DBTask.Result;
+
+            //Destroy any existing scoreboard elements
+            foreach (Transform child in scoreboardContent.transform)
+            {
+                Destroy(child.gameObject);
+            }
+
+            //Loop through every users UID
+            foreach (DataSnapshot childSnapshot in snapshot.Children.Reverse<DataSnapshot>())
+            {
+                if (childSnapshot.HasChild("Survival time") && childSnapshot.Child("Survival time").Exists)
+                {
+                    string username = childSnapshot.Child("username").Value.ToString();
+                    float survivalTime = int.Parse(childSnapshot.Child("Survival time").Value.ToString());
+
+                    //Instantiate new scoreboard elements
+                    GameObject scoreboardElement = Instantiate(scoreElement, scoreboardContent);
+                    scoreboardElement.GetComponent<LeaderboardElement>().NewScoreElement(username, survivalTime);
+                }
+            }
+
+            //Go to scoareboard screen
+        }
     }
 }
