@@ -10,7 +10,6 @@ namespace Terresquall
     [RequireComponent(typeof(Image), typeof(RectTransform))]
     public class VirtualJoystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
-
         public Image controlStick;
 
         [Header("Debug")]

@@ -411,9 +411,9 @@ MonoBehaviour:
   - {fileID: 7540727121441657115}
   propPrefabs:
   - {fileID: 1538836449468704442, guid: 6c6829a0c5370754dba16db7b1ee217e, type: 3}
-  - {fileID: 5335606264994490659, guid: 8c12c7c95b364fa4f8465a6fecbb26ba, type: 3}
-  - {fileID: 1781944601569148581, guid: 98fde725fc904ef41abd33816bfb042e, type: 3}
-  - {fileID: 2842082069039130047, guid: b4cd02d3aa3016a4ea5c1d0f22f301ee, type: 3}
+  - {fileID: 7666040957826368886, guid: d4b264f175fbba643bc1feecb36fe08b, type: 3}
+  - {fileID: 925674703364728017, guid: edd15cf4222c3d94e8383ff0ec761295, type: 3}
+  - {fileID: 4482592697682613005, guid: 2f9ebec78d8476248abc36aee277e514, type: 3}
 --- !u!1 &7540727120244676263
 GameObject:
   m_ObjectHideFlags: 0

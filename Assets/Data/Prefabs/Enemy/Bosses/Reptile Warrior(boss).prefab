@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 7816359273199407274}
   - component: {fileID: -5275326264313514981}
   - component: {fileID: 7687470846078550962}
+  - component: {fileID: -5721794194574734778}
   m_Layer: 0
   m_Name: Reptile Warrior(boss)
   m_TagString: Enemy
@@ -214,6 +215,18 @@ MonoBehaviour:
   - name: Red Gem
     itemPrefab: {fileID: 6143026828224880271, guid: cced19346d80bbc42951acfa5f4af07a, type: 3}
     dropRate: 5
+--- !u!114 &-5721794194574734778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5074950941236564018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0de92ae54d19c4cb16bcb7d805da2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5338199769723748127
 GameObject:
   m_ObjectHideFlags: 0

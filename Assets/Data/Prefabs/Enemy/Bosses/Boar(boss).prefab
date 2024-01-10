@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1647704967155911131}
   - component: {fileID: 7469632522216277631}
   - component: {fileID: 8693149547301945494}
+  - component: {fileID: 385985987385119149}
   m_Layer: 0
   m_Name: Boar(boss)
   m_TagString: Enemy
@@ -153,6 +154,18 @@ MonoBehaviour:
   - name: Red Gem
     itemPrefab: {fileID: 6143026828224880271, guid: cced19346d80bbc42951acfa5f4af07a, type: 3}
     dropRate: 5
+--- !u!114 &385985987385119149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3815937026665283732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0de92ae54d19c4cb16bcb7d805da2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3836248120703968660
 GameObject:
   m_ObjectHideFlags: 0

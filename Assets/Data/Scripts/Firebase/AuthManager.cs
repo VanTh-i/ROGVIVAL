@@ -392,9 +392,8 @@ public class AuthManager : MonoBehaviour
         else if (DBTask.Result.Child("Coin").Value == null && DBTask.Result.Child("Survival time").Value == null)
         {
             //No data exists yet
-            timeField.text = "0";
+            timeField.text = "00:00";
             userCoin.text = "0";
-            Debug.Log("not have coin and time");
         }
         else
         {
@@ -406,7 +405,6 @@ public class AuthManager : MonoBehaviour
             int sec = Mathf.FloorToInt(Convert.ToSingle(timeSurvFormat) % 60);
             timeField.text = string.Format("{0:00}:{1:00}", min, sec);
             userCoin.text = snapshot.Child("Coin").Value.ToString();
-            Debug.Log("have coin and time");
         }
     }
     public void LoadUserDataBtn()
@@ -418,7 +416,7 @@ public class AuthManager : MonoBehaviour
     private IEnumerator LoadScoreboardData()
     {
         //Get all the users data ordered by kills amount
-        Task<DataSnapshot> DBTask = DBreference.Child("users").OrderByChild("Survival time").GetValueAsync();
+        Task<DataSnapshot> DBTask = DBreference.Child("users").OrderByChild("Survival time").LimitToFirst(11).GetValueAsync();
 
         yield return new WaitUntil(predicate: () => DBTask.IsCompleted);
 
@@ -450,8 +448,6 @@ public class AuthManager : MonoBehaviour
                     scoreboardElement.GetComponent<LeaderboardElement>().NewScoreElement(username, survivalTime);
                 }
             }
-
-            //Go to scoareboard screen
         }
     }
 }

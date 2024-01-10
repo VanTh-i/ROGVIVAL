@@ -11,9 +11,7 @@ public class PlayerMovement : ThaiBehaviour
     protected Rigidbody2D rb;
     private BoxCollider2D box2d;
     [HideInInspector] public Vector2 moveDir;
-
     protected PlayerStats playerStats;
-
 
     protected override void LoadComponents()
     {
