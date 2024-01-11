@@ -15,7 +15,9 @@ public class GetPlayerData : MonoBehaviour
     public FirebaseUser User;
     public DatabaseReference DBreference;
 
-    private void Start()
+    [HideInInspector] public int maxHPValue;
+
+    private void Awake()
     {
         StartCoroutine(CheckAndFixDependenciesAsync());
     }
@@ -33,6 +35,8 @@ public class GetPlayerData : MonoBehaviour
             InitializeFirebase();
             yield return new WaitForEndOfFrame();
             StartCoroutine(CheckForAutoLogin());
+            StartCoroutine(LoadMaxHPValue());
+
         }
         else
         {
@@ -50,6 +54,11 @@ public class GetPlayerData : MonoBehaviour
 
         auth.StateChanged += AuthStateChanged;
         AuthStateChanged(this, null);
+    }
+
+    public int MaxHPValue()
+    {
+        return maxHPValue;
     }
 
     private IEnumerator CheckForAutoLogin()
@@ -208,6 +217,34 @@ public class GetPlayerData : MonoBehaviour
         SoundManager.Instance.PlaySFX("Button");
         Time.timeScale = 1f;
         SoundManager.Instance.musicSource.Stop();
+    }
+
+    private IEnumerator LoadMaxHPValue()
+    {
+        var DBTask = DBreference.Child("users").Child(User.UserId).Child("Max HP Value").GetValueAsync();
+
+        yield return new WaitUntil(() => DBTask.IsCompleted);
+
+        if (DBTask.Exception != null)
+        {
+            Debug.LogWarning($"Failed to retrieve 'max hp value' with {DBTask.Exception}");
+            yield break;
+        }
+
+        DataSnapshot snapshot = DBTask.Result;
+        if (snapshot != null && snapshot.Value != null)
+        {
+            maxHPValue = int.Parse(snapshot.Value.ToString());
+        }
+        else
+        {
+            Debug.LogWarning("Không có dữ liệu 'max hp value' trong Firebase.");
+        }
+    }
+
+    public int GetMaxHPValue()
+    {
+        return maxHPValue;
     }
 
 }

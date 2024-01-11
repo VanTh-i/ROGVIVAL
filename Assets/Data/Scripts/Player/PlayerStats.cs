@@ -102,6 +102,8 @@ public class PlayerStats : MonoBehaviour
 
     #endregion
 
+    [Header("Upgrade Value")]
+    public GetPlayerData upgradeData;
 
     [Header("Level/Exp")]
     public int experience = 0;
@@ -158,6 +160,7 @@ public class PlayerStats : MonoBehaviour
 
     private void Start()
     {
+        StartCoroutine(SetUpgradeStats());
         //experienceCap = levelRanges[0].experienceCapIncrease; //khoi tao experienceCap tai lv dau tien
 
         //GameManager.Instance.maxHPDisplay.text = "" + currentHp;
@@ -178,6 +181,13 @@ public class PlayerStats : MonoBehaviour
 
         originalColor = playerSprite.color;
 
+    }
+
+    private IEnumerator SetUpgradeStats()
+    {
+        yield return new WaitForSeconds(1f);
+        CurrentMaxHP += upgradeData.GetMaxHPValue();
+        CurrentHp += upgradeData.GetMaxHPValue();
     }
 
     public void IncreaseExperience(int amount)

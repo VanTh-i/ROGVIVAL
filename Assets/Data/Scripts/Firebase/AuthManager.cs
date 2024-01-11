@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 using UnityEngine.UI;
 using System.Linq;
 
-
 public class AuthManager : MonoBehaviour
 {
     //Firebase variables
@@ -66,6 +65,12 @@ public class AuthManager : MonoBehaviour
             logoutBtn.gameObject.SetActive(false);
             profile.gameObject.SetActive(false);
         }
+    }
+
+    public void LoadUserDataBtn()
+    {
+        if (User == null) return; //todo: sua lai khong cho an vao khi chua co nguoi dung
+        StartCoroutine(LoadUserData());
     }
 
     private IEnumerator CheckAndFixDependenciesAsync()
@@ -391,9 +396,11 @@ public class AuthManager : MonoBehaviour
         //else if (DBTask.Result.Value == null)
         else if (DBTask.Result.Child("Coin").Value == null && DBTask.Result.Child("Survival time").Value == null)
         {
+            //DataSnapshot snapshot = DBTask.Result;
             //No data exists yet
             timeField.text = "00:00";
             userCoin.text = "0";
+            //userCoin.text = snapshot.Child("Coin").Value.ToString();
         }
         else
         {
@@ -406,11 +413,6 @@ public class AuthManager : MonoBehaviour
             timeField.text = string.Format("{0:00}:{1:00}", min, sec);
             userCoin.text = snapshot.Child("Coin").Value.ToString();
         }
-    }
-    public void LoadUserDataBtn()
-    {
-        if (User == null) return; //todo: sua lai khong cho an vao khi chua co nguoi dung
-        StartCoroutine(LoadUserData());
     }
 
     private IEnumerator LoadScoreboardData()
