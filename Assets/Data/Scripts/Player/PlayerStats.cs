@@ -188,6 +188,9 @@ public class PlayerStats : MonoBehaviour
         yield return new WaitForSeconds(1f);
         CurrentMaxHP += upgradeData.GetMaxHPValue();
         CurrentHp += upgradeData.GetMaxHPValue();
+        CurrentStrength += upgradeData.GetStrengthValue();
+        CurrentArmor += upgradeData.GetArmorValue();
+        CurrentSpeed += upgradeData.GetSpeedValue();
     }
 
     public void IncreaseExperience(int amount)

@@ -6,7 +6,7 @@ public class CrownPassiveItem : PassiveItem
 {
     protected override void ApplyModifier()
     {
-        playerStats.CurrentStrength = (int)passiveItemData.Multipler;
+        playerStats.CurrentStrength += (int)passiveItemData.Multipler;
     }
 
 }

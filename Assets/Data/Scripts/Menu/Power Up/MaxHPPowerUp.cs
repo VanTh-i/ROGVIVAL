@@ -203,7 +203,7 @@ public class MaxHPPowerUp : MonoBehaviour
             description.text = snapshot.Child("Max HP Value").Value.ToString();
             string abilitiesValue = snapshot.Child("Max HP Level").Value.ToString();
 
-            level.text = "Level:" + abilitiesValue;
+            level.text = "Level: " + abilitiesValue;
 
             int abilitiesLevel = int.Parse(abilitiesValue);
             description.text = "Player Max Hp: " + upgradeData.upgradeItems.upgradelevels[abilitiesLevel].upgradeValue.ToString();

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Crown LV8
   m_EditorClassIdentifier: 
   name: Crown LV8
-  description: Raises inflicted damage by 10.
+  description: Raises inflicted damage by 1.
   icon: {fileID: 21300000, guid: 926cd6d9d5376c94c94aa193c71c359f, type: 3}
-  multipler: 10
+  multipler: 1
   level: 8
   nextLevelPrefab: {fileID: 0}

@@ -7,8 +7,7 @@ using Firebase;
 using Firebase.Auth;
 using Firebase.Database;
 using System.Threading.Tasks;
-
-public class StrengthPowerUp : MonoBehaviour
+public class SpeedPowerUp : MonoBehaviour
 {
     public DependencyStatus dependencyStatus;
     public FirebaseUser User;
@@ -62,7 +61,7 @@ public class StrengthPowerUp : MonoBehaviour
 
     private IEnumerator GetCurrentAbilitiesLevel()
     {
-        var DBTask = DBreference.Child("users").Child(User.UserId).Child("Strength Level").GetValueAsync();
+        var DBTask = DBreference.Child("users").Child(User.UserId).Child("Speed Level").GetValueAsync();
 
         yield return new WaitUntil(() => DBTask.IsCompleted);
 
@@ -133,7 +132,7 @@ public class StrengthPowerUp : MonoBehaviour
                     }
 
                     //Set the currently logged in user
-                    Task DBTask = DBreference.Child("users").Child(User.UserId).Child("Strength Level").SetValueAsync(level);
+                    Task DBTask = DBreference.Child("users").Child(User.UserId).Child("Speed Level").SetValueAsync(level);
 
                     yield return new WaitUntil(predicate: () => DBTask.IsCompleted);
 
@@ -147,11 +146,11 @@ public class StrengthPowerUp : MonoBehaviour
                         coin.text = currentCoins.ToString();
                         // updated
                         this.level.text = "Level: " + level.ToString();
-                        description.text = "Player Strength: " + upgradeData.upgradeItems.upgradelevels[level].upgradeValue.ToString();
+                        description.text = "Player Speed: " + upgradeData.upgradeItems.upgradelevels[level].upgradeValue.ToString();
                         upgradeCost.text = upgradeData.upgradeItems.upgradelevels[level].upgradeCost.ToString();
 
                         float maxHPValue = upgradeData.upgradeItems.upgradelevels[level].upgradeValue;
-                        Task updateMaxHpValueTask = DBreference.Child("users").Child(User.UserId).Child("Strength Value").SetValueAsync(maxHPValue);
+                        Task updateMaxHpValueTask = DBreference.Child("users").Child(User.UserId).Child("Speed Value").SetValueAsync(maxHPValue);
 
                     }
                     yield return new WaitForEndOfFrame();
@@ -182,14 +181,14 @@ public class StrengthPowerUp : MonoBehaviour
             Debug.LogWarning(message: $"Failed to register task with {DBTask.Exception}");
         }
         //else if (DBTask.Result.Value == null)
-        else if (DBTask.Result.Child("Strength Level").Value == null)
+        else if (DBTask.Result.Child("Speed Level").Value == null)
         {
-            DBreference.Child("users").Child(User.UserId).Child("Strength Level").SetValueAsync(0);
-            DBreference.Child("users").Child(User.UserId).Child("Strength Value").SetValueAsync(0);
+            DBreference.Child("users").Child(User.UserId).Child("Speed Level").SetValueAsync(0);
+            DBreference.Child("users").Child(User.UserId).Child("Speed Value").SetValueAsync(0);
 
             upgradeCoin.text = coin.text;
             level.text = "Level: 0";
-            description.text = "Player Strength: " + upgradeData.upgradeItems.upgradelevels[0].upgradeValue.ToString();
+            description.text = "Player Speed: " + upgradeData.upgradeItems.upgradelevels[0].upgradeValue.ToString();
             upgradeCost.text = upgradeData.upgradeItems.upgradelevels[0].upgradeCost.ToString();
         }
         else
@@ -200,15 +199,14 @@ public class StrengthPowerUp : MonoBehaviour
             upgradeCoin.text = coin.text;
 
             //level.text = snapshot.Child("Abilities").Value.ToString();
-            description.text = snapshot.Child("Strength Value").Value.ToString();
-            string abilitiesValue = snapshot.Child("Strength Level").Value.ToString();
+            description.text = snapshot.Child("Speed Value").Value.ToString();
+            string abilitiesValue = snapshot.Child("Speed Level").Value.ToString();
 
             level.text = "Level: " + abilitiesValue;
 
             int abilitiesLevel = int.Parse(abilitiesValue);
-            description.text = "Player Strength: " + upgradeData.upgradeItems.upgradelevels[abilitiesLevel].upgradeValue.ToString();
+            description.text = "Player Speed: " + upgradeData.upgradeItems.upgradelevels[abilitiesLevel].upgradeValue.ToString();
             upgradeCost.text = upgradeData.upgradeItems.upgradelevels[abilitiesLevel].upgradeCost.ToString();
         }
     }
-
 }

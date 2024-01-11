@@ -16,6 +16,9 @@ public class GetPlayerData : MonoBehaviour
     public DatabaseReference DBreference;
 
     [HideInInspector] public int maxHPValue;
+    [HideInInspector] public int strengthValue;
+    [HideInInspector] public int armorValue;
+    [HideInInspector] public float speedValue;
 
     private void Awake()
     {
@@ -33,9 +36,13 @@ public class GetPlayerData : MonoBehaviour
         {
             //If they are avalible Initialize Firebase
             InitializeFirebase();
+            StartCoroutine(LoadMaxHPValue());
+            StartCoroutine(LoadStrengthValue());
+            StartCoroutine(LoadArmorValue());
+            StartCoroutine(LoadSpeedValue());
             yield return new WaitForEndOfFrame();
             StartCoroutine(CheckForAutoLogin());
-            StartCoroutine(LoadMaxHPValue());
+
 
         }
         else
@@ -54,11 +61,6 @@ public class GetPlayerData : MonoBehaviour
 
         auth.StateChanged += AuthStateChanged;
         AuthStateChanged(this, null);
-    }
-
-    public int MaxHPValue()
-    {
-        return maxHPValue;
     }
 
     private IEnumerator CheckForAutoLogin()
@@ -242,9 +244,93 @@ public class GetPlayerData : MonoBehaviour
         }
     }
 
+    private IEnumerator LoadStrengthValue()
+    {
+        var DBTask = DBreference.Child("users").Child(User.UserId).Child("Strength Value").GetValueAsync();
+
+        yield return new WaitUntil(() => DBTask.IsCompleted);
+
+        if (DBTask.Exception != null)
+        {
+            Debug.LogWarning($"Failed to retrieve 'max hp value' with {DBTask.Exception}");
+            yield break;
+        }
+
+        DataSnapshot snapshot = DBTask.Result;
+        if (snapshot != null && snapshot.Value != null)
+        {
+            strengthValue = int.Parse(snapshot.Value.ToString());
+        }
+        else
+        {
+            Debug.LogWarning("Không có dữ liệu 'max hp value' trong Firebase.");
+        }
+    }
+
+    private IEnumerator LoadArmorValue()
+    {
+        var DBTask = DBreference.Child("users").Child(User.UserId).Child("Armor Value").GetValueAsync();
+
+        yield return new WaitUntil(() => DBTask.IsCompleted);
+
+        if (DBTask.Exception != null)
+        {
+            Debug.LogWarning($"Failed to retrieve 'max hp value' with {DBTask.Exception}");
+            yield break;
+        }
+
+        DataSnapshot snapshot = DBTask.Result;
+        if (snapshot != null && snapshot.Value != null)
+        {
+            armorValue = int.Parse(snapshot.Value.ToString());
+        }
+        else
+        {
+            Debug.LogWarning("Không có dữ liệu 'max hp value' trong Firebase.");
+        }
+    }
+
+    private IEnumerator LoadSpeedValue()
+    {
+        var DBTask = DBreference.Child("users").Child(User.UserId).Child("Speed Value").GetValueAsync();
+
+        yield return new WaitUntil(() => DBTask.IsCompleted);
+
+        if (DBTask.Exception != null)
+        {
+            Debug.LogWarning($"Failed to retrieve 'max hp value' with {DBTask.Exception}");
+            yield break;
+        }
+
+        DataSnapshot snapshot = DBTask.Result;
+        if (snapshot != null && snapshot.Value != null)
+        {
+            speedValue = float.Parse(snapshot.Value.ToString());
+        }
+        else
+        {
+            Debug.LogWarning("Không có dữ liệu 'max hp value' trong Firebase.");
+        }
+    }
+
     public int GetMaxHPValue()
     {
         return maxHPValue;
+    }
+
+    public int GetStrengthValue()
+    {
+        return strengthValue;
+    }
+
+    public int GetArmorValue()
+    {
+        return armorValue;
+    }
+
+    public float GetSpeedValue()
+    {
+        return speedValue;
     }
 
 }

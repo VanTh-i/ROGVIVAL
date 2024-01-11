@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Armor LV5
   m_EditorClassIdentifier: 
   name: Armor LV5
-  description: Reduces incoming damage by 5.
+  description: Reduces incoming damage by 1.
   icon: {fileID: 21300000, guid: 1b1d75c1fe9907e439c9755f62afb635, type: 3}
-  multipler: 5
+  multipler: 1
   level: 5
   nextLevelPrefab: {fileID: 2833609419833797653, guid: 53b9bdf010499844dabf99210d40a1f1, type: 3}

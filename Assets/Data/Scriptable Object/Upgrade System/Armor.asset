@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a075b73e7cf4204bbf06ebd2de4b4b9, type: 3}
-  m_Name: MaxHP
+  m_Name: Armor
   m_EditorClassIdentifier: 
   upgradeItems:
-    upgradeName: MaxHP
+    upgradeName: Armor
     upgradelevels:
     - upgradeCost: 100
       upgradeValue: 0
     - upgradeCost: 200
-      upgradeValue: 10
+      upgradeValue: 1
     - upgradeCost: 300
-      upgradeValue: 20
+      upgradeValue: 2
     - upgradeCost: 400
-      upgradeValue: 30
+      upgradeValue: 3
     - upgradeCost: 500
-      upgradeValue: 40
+      upgradeValue: 4
     - upgradeCost: 0
-      upgradeValue: 50
+      upgradeValue: 5

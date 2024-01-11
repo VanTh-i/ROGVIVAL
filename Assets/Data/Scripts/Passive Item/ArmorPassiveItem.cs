@@ -6,6 +6,6 @@ public class ArmorPassiveItem : PassiveItem
 {
     protected override void ApplyModifier()
     {
-        playerStats.CurrentArmor = (int)passiveItemData.Multipler;
+        playerStats.CurrentArmor += (int)passiveItemData.Multipler;
     }
 }
