@@ -1645,7 +1645,7 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
-  m_ChildScaleWidth: 1
+  m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
 --- !u!1 &169588664
@@ -6674,8 +6674,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 946.6376, y: -174.62344}
-  m_SizeDelta: {x: 253.32501, y: 349.2469}
+  m_AnchoredPosition: {x: 1366.3147, y: -207.60793}
+  m_SizeDelta: {x: 373.2328, y: 415.21585}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &769343839
 CanvasRenderer:
@@ -7047,7 +7047,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 87.15
+  m_fontSize: 100
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7877,10 +7877,6 @@ MonoBehaviour:
       enemyCount: 999
       spawnCount: 0
       enemyPrefab: {fileID: 8113727090440078884, guid: 36f9749f521370f478c875a9f931bdda, type: 3}
-    - enemyName: boss
-      enemyCount: 1
-      spawnCount: 0
-      enemyPrefab: {fileID: 3078066447260828687, guid: 7c601cc2b880cad4f97e5f396a77db7c, type: 3}
     waveQuantity: 0
     spawnCount: 0
     spawnInterval: 3
@@ -7937,7 +7933,7 @@ MonoBehaviour:
       enemyPrefab: {fileID: 8113727090440078884, guid: 36f9749f521370f478c875a9f931bdda, type: 3}
     waveQuantity: 0
     spawnCount: 0
-    spawnInterval: 2
+    spawnInterval: 3
   - waveName: Wave 4
     enemyTypes:
     - enemyName: boar
@@ -7966,7 +7962,7 @@ MonoBehaviour:
       enemyPrefab: {fileID: 7852717934789078804, guid: 049c26e745f5a8a408f58b2941f3e08c, type: 3}
     waveQuantity: 0
     spawnCount: 0
-    spawnInterval: 2
+    spawnInterval: 3
   - waveName: Wave 5
     enemyTypes:
     - enemyName: boar
@@ -7995,7 +7991,7 @@ MonoBehaviour:
       enemyPrefab: {fileID: 5574493498182591039, guid: 90cba7bda00196748924125dd7d58f94, type: 3}
     waveQuantity: 0
     spawnCount: 0
-    spawnInterval: 2
+    spawnInterval: 3
   - waveName: Wave 6
     enemyTypes:
     - enemyName: boss
@@ -8036,7 +8032,7 @@ MonoBehaviour:
       enemyPrefab: {fileID: 7852717934789078804, guid: 049c26e745f5a8a408f58b2941f3e08c, type: 3}
     waveQuantity: 0
     spawnCount: 0
-    spawnInterval: 2
+    spawnInterval: 3
   - waveName: Wave 7
     enemyTypes:
     - enemyName: boar
@@ -8073,7 +8069,7 @@ MonoBehaviour:
       enemyPrefab: {fileID: 3078066447260828687, guid: 7b2eaeac384a62e4a903401a7bbcda11, type: 3}
     waveQuantity: 0
     spawnCount: 0
-    spawnInterval: 2
+    spawnInterval: 3
   - waveName: Wave 8
     enemyTypes:
     - enemyName: boar
@@ -8110,7 +8106,7 @@ MonoBehaviour:
       enemyPrefab: {fileID: 8337680984500150315, guid: 1db6898d25d4dac4dac48b7c238e06cf, type: 3}
     waveQuantity: 0
     spawnCount: 0
-    spawnInterval: 2
+    spawnInterval: 3
   - waveName: Wave 9
     enemyTypes:
     - enemyName: boss
@@ -8151,7 +8147,7 @@ MonoBehaviour:
       enemyPrefab: {fileID: 8337680984500150315, guid: 1db6898d25d4dac4dac48b7c238e06cf, type: 3}
     waveQuantity: 0
     spawnCount: 0
-    spawnInterval: 2
+    spawnInterval: 3
   - waveName: Wave 10
     enemyTypes:
     - enemyName: giant
@@ -8741,7 +8737,7 @@ MonoBehaviour:
     spawnInterval: 1
   currWaveCount: 0
   waveInterval: 60
-  maxEnemiesAllowed: 50
+  maxEnemiesAllowed: 40
   enemiesAlive: 0
   maxEnemiesReached: 0
   spawnPosition:
@@ -11561,8 +11557,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 673.3125, y: -174.62344}
-  m_SizeDelta: {x: 253.32501, y: 349.2469}
+  m_AnchoredPosition: {x: 973.082, y: -207.60793}
+  m_SizeDelta: {x: 373.2328, y: 415.21585}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1258879984
 CanvasRenderer:
@@ -13253,6 +13249,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dependencyStatus: 0
   maxHPValue: 0
+  strengthValue: 0
+  armorValue: 0
+  speedValue: 0
 --- !u!1 &1507182907
 GameObject:
   m_ObjectHideFlags: 0
@@ -17331,8 +17330,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 126.662506, y: -174.62344}
-  m_SizeDelta: {x: 253.32501, y: 349.2469}
+  m_AnchoredPosition: {x: 186.6164, y: -207.60793}
+  m_SizeDelta: {x: 373.2328, y: 415.21585}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1896856081
 CanvasRenderer:
@@ -18437,8 +18436,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 399.98752, y: -174.62344}
-  m_SizeDelta: {x: 253.32501, y: 349.2469}
+  m_AnchoredPosition: {x: 579.8492, y: -207.60793}
+  m_SizeDelta: {x: 373.2328, y: 415.21585}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2000839840
 CanvasRenderer:

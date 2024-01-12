@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -10,6 +11,9 @@ namespace Terresquall
     [RequireComponent(typeof(Image), typeof(RectTransform))]
     public class VirtualJoystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
+        private CanvasGroup canvasGroup;
+        private Coroutine fadeOutCoroutine;
+
         public Image controlStick;
 
         [Header("Debug")]
@@ -102,6 +106,8 @@ namespace Terresquall
             currentPointerId = data.pointerId;
             SetPosition(data.position);
             controlStick.color = dragColor;
+
+            ResetFadeOut();
         }
 
         // Hook this to the EndDrag event of an EventTrigger.
@@ -111,6 +117,7 @@ namespace Terresquall
             controlStick.color = originalColor;
             currentPointerId = -2;
 
+            ResetFadeOut();
             //Snaps the joystick back to its original position
             /*if (snapToOrigin && (Vector2)transform.position != origin) {
                 transform.position = origin;
@@ -232,6 +239,9 @@ namespace Terresquall
 
         void Start()
         {
+            canvasGroup = GetComponent<CanvasGroup>();
+            fadeOutCoroutine = StartCoroutine(FadeOutAfterDelay(0.5f));
+
 
             // If we are not on mobile, and this is mobile only, disable.
             if (!Application.isMobilePlatform && onlyOnMobile)
@@ -342,6 +352,45 @@ namespace Terresquall
             data.pointerId = newPointerId;
             OnPointerDown(data);
         }
+
+        private IEnumerator FadeOutAfterDelay(float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            fadeOutCoroutine = StartCoroutine(FadeOut());
+        }
+
+        private IEnumerator FadeOut()
+        {
+            float fadeDuration = 0.5f; // Thời gian làm mờ
+            float targetAlpha = 0f; // Độ mờ cuối cùng
+
+            float elapsedTime = 0f;
+            float startAlpha = canvasGroup.alpha;
+
+            while (elapsedTime < fadeDuration)
+            {
+                canvasGroup.alpha = Mathf.Lerp(startAlpha, targetAlpha, elapsedTime / fadeDuration);
+                elapsedTime += Time.deltaTime;
+                yield return null;
+            }
+
+            canvasGroup.alpha = targetAlpha;
+            canvasGroup.interactable = false; // Tắt tương tác
+            canvasGroup.blocksRaycasts = false; // Tắt raycast
+        }
+
+        private void ResetFadeOut()
+        {
+            if (fadeOutCoroutine != null)
+            {
+                StopCoroutine(fadeOutCoroutine);
+                canvasGroup.alpha = 1f; // Đặt lại alpha về 1 khi chạm vào màn hình
+                canvasGroup.interactable = true; // Bật lại tương tác
+                canvasGroup.blocksRaycasts = true; // Bật lại raycast
+                fadeOutCoroutine = StartCoroutine(FadeOutAfterDelay(1f));
+            }
+        }
+
     }
 
 

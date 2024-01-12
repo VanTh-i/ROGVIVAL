@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Firebase;
 using Firebase.Auth;
 using Firebase.Database;
@@ -38,6 +39,8 @@ public class AuthManager : MonoBehaviour
     public Button loginBtn;
     public Button logoutBtn;
     public GameObject profile;
+    public Button powerUpBtn;
+    public GameObject blockWarningUI;
 
     [Header("UserData")]
     public TMP_Text usernameText;
@@ -58,12 +61,26 @@ public class AuthManager : MonoBehaviour
             loginBtn.gameObject.SetActive(false);
             logoutBtn.gameObject.SetActive(true);
             profile.gameObject.SetActive(true);
+            powerUpBtn.gameObject.SetActive(true);
         }
         else
         {
             loginBtn.gameObject.SetActive(true);
             logoutBtn.gameObject.SetActive(false);
             profile.gameObject.SetActive(false);
+            powerUpBtn.gameObject.SetActive(false);
+        }
+    }
+
+    public void StartGameButton()
+    {
+        if (auth != null && User != null)
+        {
+            SceneManager.LoadScene("Menu");
+        }
+        else
+        {
+            blockWarningUI.SetActive(true);
         }
     }
 

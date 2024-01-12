@@ -6,6 +6,6 @@ public class BossTreasure : MonoBehaviour
 {
     private void OnDisable()
     {
-        GameManager.Instance.Coin += Random.Range(10, 30);
+        GameManager.Instance.Coin += Random.Range(50, 100);
     }
 }
