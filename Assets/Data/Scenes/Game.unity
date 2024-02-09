@@ -11441,7 +11441,7 @@ MonoBehaviour:
   currentChunk: {fileID: 0}
   spawnerChunk:
   - {fileID: 431305043}
-  maxOpDist: 50
+  maxOpDist: 56
   optCooldownDur: 1
 --- !u!4 &1240670181
 Transform:
